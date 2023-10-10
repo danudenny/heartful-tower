@@ -168,7 +168,7 @@ const CardSlider = () => {
 
   return (
     <div className="carousel">
-      <div className="relative overflow-hidden z-50">
+      <div className="relative overflow-hidden z-70">
         <div
           ref={carousel}
           className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
