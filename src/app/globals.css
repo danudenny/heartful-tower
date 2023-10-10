@@ -95,15 +95,16 @@
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     bottom: 0;
-    font-size: 150px;
-    text-shadow: -2px -2px 0 #EBBE63,
-    2px -2px 0 #EBBE63,
-    -2px 2px 0 #EBBE63,
-    2px 2px 0 #EBBE63;
-    opacity: 30%;
+    font-size: 200px;
+    text-shadow: -2px -2px 0 #73B153,
+    2px -2px 0 #73B153,
+    -2px 2px 0 #73B153,
+    2px 2px 0 #73B153;
+    opacity: 20%;
     color: white;
     right: 100px;
-    font-weight: 700;
+    font-weight: 900;
+    line-height: 250px;
 }
 
 .about-container {
