@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen" key="hero">
       {/* Left side */}
       <div className="flex-initial w-3/5 bg-primary text-white">
         <div className="hero-text-outline">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Siteplan = () => {
   return (
-    <div className="siteplan mx-auto">
+    <div className="siteplan mx-auto" key="siteplan">
       <div className="flex w-1/2 mx-auto">
         <Image
           src="/siteplan.png"

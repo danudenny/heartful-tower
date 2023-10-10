@@ -106,6 +106,10 @@
     font-weight: 700;
 }
 
+.about-container {
+    position: relative;
+}
+
 .about {
     height: 949px;
     position: absolute;
@@ -151,3 +155,66 @@
     font-weight: 700;
 }
 
+/*Fscilties*/
+
+.facilities-container {
+    position: relative;
+}
+
+.facilities {
+    margin-top: 949px;
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    color: white;
+}
+
+.facilities-title h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 30px;
+}
+
+.facilities-title span {
+    text-shadow: -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+    font-style: italic;
+    color: #75ACD8;
+}
+
+.facilities-desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.facilities-big {
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    font-size: 300px;
+    position: absolute;
+    bottom: 45%;
+    text-shadow: -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    opacity: .1;
+    color: #75ACD8;
+}
+
+/*Card Slider*/
+.image-carousel {
+    border-radius: 50px
+}
+
+/*Video Player*/
+.video-player {
+    margin-top: calc(949px + 100vh);
+    position: relative;
+}
