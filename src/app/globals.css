@@ -218,3 +218,60 @@
     margin-top: calc(949px + 100vh);
     position: relative;
 }
+
+/*Units*/
+.unit-container {
+    position: relative;
+    height: 80vh;
+}
+
+.units {
+    position: absolute;
+    width: 100vw;
+    color: white;;
+}
+
+/*Testimonial*/
+.testimonial-container {
+    position: relative;
+    height: 80vh;
+}
+
+/*News*/
+.news-container {
+    position: relative;
+    height: 100vh;
+}
+
+/*Contact Us*/
+.contact-us-container {
+    position: relative;
+    height: 40vh;
+}
+
+/*Footer*/
+.footer-container {
+    position: relative;
+    height: 50vh;
+}
+
+.footer {
+    padding: 50px;
+}
+
+.footer h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.footer p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.footer-menu {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
