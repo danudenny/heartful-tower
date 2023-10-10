@@ -2,6 +2,8 @@ import { Navbar } from "./components/Navbar";
 import { Header } from "@/app/components/Header";
 import { Hero } from "@/app/components/Hero";
 import { SocialFloat } from "@/app/components/SocialFloat";
+import { Siteplan } from "@/app/components/Siteplan";
+import { About } from "@/app/components/About";
 
 export default function Home() {
   return (
@@ -11,9 +13,8 @@ export default function Home() {
         <Navbar />
       </Header>
       <Hero />
-      <div className="h-screen bg-success">
-        <h1>About</h1>
-      </div>
+      <Siteplan />
+      <About />
     </main>
   );
 }
