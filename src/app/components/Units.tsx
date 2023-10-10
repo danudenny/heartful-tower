@@ -26,7 +26,7 @@ export const Units = () => {
             </div>
           </div>
         </div>
-        <div className="z-50">
+        <div className="z-40">
           <section>
             <div className="container px-6 mx-auto">
               <div className="mt-8 xl:mt-16 lg:flex lg:-mx-12">

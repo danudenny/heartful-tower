@@ -29,7 +29,7 @@ export const News = () => {
   ];
   return (
     <div className="news-container bg-primary">
-      <div className="news container mx-auto flex flex-col pt-20 gap-4">
+      <div className="news container mx-auto flex flex-col pt-20 gap-4 z-50">
         <h1 className="justify-start">
           Latest <span>News</span>
         </h1>
@@ -40,7 +40,7 @@ export const News = () => {
           ))}
         </div>
         <div className="flex justify-center items-center align-middle">
-          <button className="z-50 mt-10 flex items-center gap-2 rounded-full bg-warning hover:bg-amber-500 px-7 py-3 text-white shadow transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-amber-500/50 hover:text-white font-bold text-xl">
+          <button className="z-30 mt-10 flex items-center gap-2 rounded-full bg-warning hover:bg-amber-500 px-7 py-3 text-white shadow transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-amber-500/50 hover:text-white font-bold text-xl">
             READ MORE
             <svg
               xmlns="http://www.w3.org/2000/svg"

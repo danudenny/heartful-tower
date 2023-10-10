@@ -308,7 +308,19 @@
 /*Contact Us*/
 .contact-us-container {
     position: relative;
-    height: 40vh;
+    height: 81vh;
+}
+
+.contact-big {
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    font-size: 300px;
+    position: absolute;
+    left: 30px;
+    bottom: 10%;
+    opacity: .2;
+    color: #EBBE63;
+    line-height: 180px;
 }
 
 /*Footer*/

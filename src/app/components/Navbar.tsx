@@ -13,7 +13,9 @@ export const Navbar = () => {
   return (
     <nav className="flex justify-between items-center relative z-auto">
       <div>
-        <h1>Logo</h1>
+        <h1 className="font-black text-2xl text-white shadow-black cursor-pointer">
+          Logo
+        </h1>
       </div>
       <div>
         <ul className="flex justify-between gap-5 rounded-full px-3 py-2 border-2 border-blue-400 cursor-pointer items-center bg-white">
