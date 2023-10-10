@@ -64,12 +64,14 @@ const CardSlider = () => {
   const startAutoplay = () => {
     if (!autoplayInterval.current) {
       // @ts-ignore
+      const currentCarousel = carousel.current as HTMLElement; // Type assertion
+      // @ts-ignore
       autoplayInterval.current = setInterval(() => {
         if (currentIndex === data.length - 1) {
           // When reaching the last slide, reset to the first slide without delay
           setCurrentIndex(0);
-          if (carousel.current) {
-            carousel.current.scrollLeft = 0;
+          if (currentCarousel) {
+            currentCarousel.scrollLeft = 0;
           }
         } else {
           moveNext();
@@ -89,7 +91,10 @@ const CardSlider = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
       if (carousel.current) {
-        carousel.current.scrollLeft -= slideWidth.current; // Move left by one slide width
+        const currentCarousel = carousel.current as HTMLElement; // Type assertion
+        if (typeof currentCarousel.scrollLeft !== "undefined") {
+          currentCarousel.scrollLeft -= slideWidth.current; // Move left by one slide width
+        }
       }
     }
   };
@@ -98,13 +103,19 @@ const CardSlider = () => {
     if (currentIndex < data.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       if (carousel.current) {
-        carousel.current.scrollLeft += slideWidth.current; // Move right by one slide width
+        const currentCarousel = carousel.current as HTMLElement; // Type assertion
+        if (typeof currentCarousel.scrollLeft !== "undefined") {
+          currentCarousel.scrollLeft += slideWidth.current; // Move right by one slide width
+        }
       }
     } else {
       // When reaching the last slide, reset to the first slide immediately
       setCurrentIndex(0);
       if (carousel.current) {
-        carousel.current.scrollLeft = 0;
+        const currentCarousel = carousel.current as HTMLElement; // Type assertion
+        if (typeof currentCarousel.scrollLeft !== "undefined") {
+          currentCarousel.scrollLeft = 0;
+        }
       }
     }
   };
@@ -123,19 +134,28 @@ const CardSlider = () => {
 
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
-      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
+      const currentCarousel = carousel.current as HTMLElement; // Type assertion
+      if (typeof currentCarousel.offsetWidth !== "undefined") {
+        currentCarousel.scrollLeft = currentCarousel.offsetWidth * currentIndex;
+      }
     }
   }, [currentIndex]);
 
   useEffect(() => {
-    maxScrollWidth.current = carousel.current
-      ? carousel.current.scrollWidth - carousel.current.offsetWidth
-      : 0;
+    if (carousel.current) {
+      const currentCarousel = carousel.current as HTMLElement; // Type assertion
+      maxScrollWidth.current =
+        currentCarousel.scrollWidth - (currentCarousel.offsetWidth || 0);
+    } else {
+      maxScrollWidth.current = 0;
+    }
   }, []);
-
   useEffect(() => {
     if (carousel.current) {
-      slideWidth.current = carousel.current.offsetWidth;
+      const currentCarousel = carousel.current as HTMLElement; // Type assertion
+      if (typeof currentCarousel.offsetWidth !== "undefined") {
+        slideWidth.current = currentCarousel.offsetWidth;
+      }
     }
   }, []);
 
