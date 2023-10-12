@@ -1,29 +1,47 @@
-export const Hero = () => {
+import Image from "next/image";
+import React from "react";
+
+interface HeroProps {
+  reference: React.MutableRefObject<null>;
+}
+
+export const Hero = ({ reference }: HeroProps) => {
   return (
-    <div className="flex h-screen" key="hero">
-      {/* Left side */}
-      <div className="flex-initial w-3/5 bg-primary text-white">
-        <div className="hero-text-outline">
-          <h1>HEARTFUL</h1>
-          <h1 className="-mt-56">TOWER</h1>
-        </div>
-
-        <div className="flex flex-col justify-center items-start h-full ml-52 hero-text">
-          <h1 className="text-9xl font-black">The Desire </h1>
-          <div className="flex gap-8">
-            <h1 className="text-9xl font-black"> To </h1>
-            <h1 className="text-9xl hero-thrive-text">Thrive</h1>
+    <div
+      className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 h-screen bg-hero"
+      ref={reference}
+    >
+      <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-2/5 lg:max-w-full lg:absolute xl:px-0">
+        <Image
+          src="/bird-eye-stand-3.png"
+          alt="Hero Image"
+          width={800}
+          height={300}
+          className="object-cover w-full object-bottom h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+        />
+      </div>
+      <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+        <div className="mb-16 lg:my-40 lg:max-w-full lg:pr-5">
+          <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-warning">
+            Brand new
+          </p>
+          <h2 className="mb-5 font-black text-4xl tracking-wider text-white sm:text-8xl sm:leading-none">
+            The Desire
+            <br />
+            To<span className="text-[#73B153] italic">Thrive</span>
+          </h2>
+          <p className="pr-5 text-white md:text-lg lg:text-2xl">
+            Selamat datang di Heartful Tower Bekasi. <br />
+            Apartement dengan harga terbaik.
+          </p>
+          <div className="flex mb-5">
+            <p className="text-white md:text-lg lg:text-2xl">
+              Oleh Developer Jepang.
+            </p>
+            <img src="/Japanese-Flag.png" alt="japan-flag" width="45" />
           </div>
-          <div className="text-2xl font-regular mt-8 text-gray-100">
-            <p>Selamat datang di Heartful Tower Bekasi,</p>
-            <p>Apartemen dengan harga terbaik.</p>
-            <div className="flex gap-2 items-center">
-              <p>Oleh Developer Jepang</p>
-              <img src="/Japanese-Flag.png" alt="jaoan-flag" width="28" />
-            </div>
-          </div>
 
-          <div className="flex items-center mt-10 z-30">
+          <div className="flex items-center mt-10 z-30 gap-3">
             <img src="/Logo-IIDA.png" alt="logo-iida" width="100" />
             <img
               src="/Japanese-No.1-Developer.png"
@@ -31,29 +49,16 @@ export const Hero = () => {
               width="200"
             />
           </div>
-
-          <button className="z-50 mt-10 flex items-center gap-2 rounded-full bg-warning hover:bg-amber-500 px-7 py-3 text-white shadow transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-amber-500/50 hover:text-white font-bold text-xl">
-            GET INFORMATION
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              stroke="currentColor"
-              className="w-6 h-6"
+          <div className="flex items-center mt-10 lg:text-2xl">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-success hover:bg-success-alt focus:shadow-outline focus:outline-none"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-              />
-            </svg>
-          </button>
+              Dapatkan Informasi
+            </a>
+          </div>
         </div>
       </div>
-
-      {/* Right side */}
-      <div className="flex-initial w-2/5 bg-hero-image bg-primary"></div>
     </div>
   );
 };

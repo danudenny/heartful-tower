@@ -1,62 +1,186 @@
-import NewsCard from "@/app/components/NewsCard";
+interface NewsProps {
+  reference: React.MutableRefObject<null>;
+}
 
-export const News = () => {
-  const newsData = [
-    {
-      imageUrl: "/facilities/fitness.jpg",
-      title: "News 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec ullamcorper libero.",
-    },
-    {
-      imageUrl: "/news2.jpg",
-      title: "News 2",
-      description:
-        "Suspendisse eget massa vel ante venenatis faucibus. Quisque tristique tincidunt.",
-    },
-    {
-      imageUrl: "/news3.jpg",
-      title: "News 3",
-      description:
-        "Pellentesque nec justo id augue dapibus pharetra ac eu urna. In ac semper leo.",
-    },
-    {
-      imageUrl: "/news4.jpg",
-      title: "News 4",
-      description:
-        "Fusce laoreet mi eget dui venenatis, id elementum tortor bibendum. Vivamus id metus vitae est ullamcorper consequat.",
-    },
-  ];
+export const News = ({ reference }: NewsProps) => {
   return (
-    <div className="news-container bg-primary">
-      <div className="news container mx-auto flex flex-col pt-20 gap-4 z-50">
-        <h1 className="justify-start">
-          Latest <span>News</span>
-        </h1>
-        <hr style={{ width: "100%" }} className="border-secondary mb-5" />
-        <div className="flex gap-5">
-          {newsData.map((news, index) => (
-            <NewsCard key={index} />
-          ))}
+    <div className="bg-news py-6 sm:py-8 lg:py-12" ref={reference}>
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+        <div className="mb-10 md:mb-16">
+          <h2 className="mb-4 text-center text-2xl font-black tracking-wider text-white md:mb-6 lg:text-6xl uppercase">
+            News
+          </h2>
+
+          <p className="mx-auto max-w-screen-md text-center text-white md:text-lg">
+            Stay informed about the latest developments, trends, and insights in
+            Heartful Tower Bekasi.
+          </p>
         </div>
-        <div className="flex justify-center items-center align-middle">
-          <button className="z-30 mt-10 flex items-center gap-2 rounded-full bg-warning hover:bg-amber-500 px-7 py-3 text-white shadow transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-amber-500/50 hover:text-white font-bold text-xl">
-            READ MORE
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              stroke="currentColor"
-              className="w-6 h-6"
+
+        <div className="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2 xl:grid-cols-2 xl:gap-8">
+          <div className="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row bg-white">
+            <a
+              href="#"
+              className="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              <img
+                src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600"
+                loading="lazy"
+                alt="Photo by Minh Pham"
+                className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
               />
-            </svg>
-          </button>
+            </a>
+
+            <div className="flex flex-col gap-2 p-4 lg:p-6">
+              <span className="text-sm text-gray-400">July 19, 2021</span>
+
+              <h2 className="text-xl font-bold text-gray-800">
+                <a
+                  href="#"
+                  className="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                >
+                  New trends in Tech
+                </a>
+              </h2>
+
+              <p className="text-gray-500">
+                This is a section of some simple filler text, also known as
+                placeholder text.
+              </p>
+
+              <div>
+                <a
+                  href="#"
+                  className="font-semibold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
+                >
+                  Read more
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row bg-white">
+            <a
+              href="#"
+              className="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600"
+                loading="lazy"
+                alt="Photo by Lorenzo Herrera"
+                className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+            </a>
+
+            <div className="flex flex-col gap-2 p-4 lg:p-6">
+              <span className="text-sm text-gray-400">April 07, 2021</span>
+
+              <h2 className="text-xl font-bold text-gray-800">
+                <a
+                  href="#"
+                  className="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                >
+                  Working with legacy stacks
+                </a>
+              </h2>
+
+              <p className="text-gray-500">
+                This is a section of some simple filler text, also known as
+                placeholder text.
+              </p>
+
+              <div>
+                <a
+                  href="#"
+                  className="font-semibold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
+                >
+                  Read more
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row bg-white">
+            <a
+              href="#"
+              className="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600"
+                loading="lazy"
+                alt="Photo by Magicle"
+                className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+            </a>
+
+            <div className="flex flex-col gap-2 p-4 lg:p-6">
+              <span className="text-sm text-gray-400">March 15, 2021</span>
+
+              <h2 className="text-xl font-bold text-gray-800">
+                <a
+                  href="#"
+                  className="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                >
+                  10 best smartphones for devs
+                </a>
+              </h2>
+
+              <p className="text-gray-500">
+                This is a section of some simple filler text, also known as
+                placeholder text.
+              </p>
+
+              <div>
+                <a
+                  href="#"
+                  className="font-semibold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
+                >
+                  Read more
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center overflow-hidden rounded-lg border md:flex-row bg-white">
+            <a
+              href="#"
+              className="group relative block h-48 w-full shrink-0 self-start overflow-hidden bg-gray-100 md:h-full md:w-32 lg:w-48"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600"
+                loading="lazy"
+                alt="Photo by Martin Sanchez"
+                className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+            </a>
+
+            <div className="flex flex-col gap-2 p-4 lg:p-6">
+              <span className="text-sm text-gray-400">January 27, 2021</span>
+
+              <h2 className="text-xl font-bold text-gray-800">
+                <a
+                  href="#"
+                  className="transition duration-100 hover:text-indigo-500 active:text-indigo-600"
+                >
+                  8 High performance Notebooks
+                </a>
+              </h2>
+
+              <p className="text-gray-500">
+                This is a section of some simple filler text, also known as
+                placeholder text.
+              </p>
+
+              <div>
+                <a
+                  href="#"
+                  className="font-semibold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
+                >
+                  Read more
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

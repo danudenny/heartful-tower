@@ -1,109 +1,67 @@
 export const Testimonial = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 testimonial-container">
-      <div className="container px-6 py-10 mx-auto">
-        <div className="testimonial-big">
-          <h1>
-            TESTI
-            <br />
-            MONIAL
-          </h1>
+    <div className="bg-white py-6 sm:py-8 lg:py-12">
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+        <h2 className="mb-8 text-center text-2xl font-bold text-gray-800 md:mb-12 lg:text-3xl">
+          What others say about us
+        </h2>
+
+        <div className="grid gap-4 md:grid-cols-2 md:gap-8">
+          <div className="flex flex-col items-center gap-4 rounded-lg bg-indigo-500 px-8 py-6 md:gap-6">
+            <div className="max-w-md text-center text-white lg:text-lg">
+              “This is a section of some simple filler text, also known as
+              placeholder text.”
+            </div>
+
+            <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
+              <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-indigo-100 bg-gray-100 md:h-14 md:w-14">
+                <img
+                  src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=112"
+                  loading="lazy"
+                  alt="Photo by Radu Florin"
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+
+              <div>
+                <div className="text-center text-sm font-bold text-indigo-50 sm:text-left md:text-base">
+                  John McCulling
+                </div>
+                <p className="text-center text-sm text-indigo-200 sm:text-left md:text-sm">
+                  CEO / Datadrift
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 rounded-lg bg-indigo-500 px-8 py-6 md:gap-6">
+            <div className="max-w-md text-center text-white lg:text-lg">
+              “This is a section of some simple filler text, also known as
+              placeholder text.”
+            </div>
+
+            <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
+              <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-indigo-100 bg-gray-100 md:h-14 md:w-14">
+                <img
+                  src="https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?auto=format&q=75&fit=crop&w=112"
+                  loading="lazy"
+                  alt="Photo by christian ferrer"
+                  className="h-full w-full object-cover object-center"
+                />
+              </div>
+
+              <div>
+                <div className="text-center text-sm font-bold text-indigo-50 sm:text-left md:text-base">
+                  Kate Berg
+                </div>
+                <p className="text-center text-sm text-indigo-200 sm:text-left md:text-sm">
+                  CFO / Dashdash
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-5 ">
-          <img
-            src="/circle-arrow-bottom-right.svg"
-            alt="header-logo"
-            width={100}
-            height={122}
-          />
-          <div className="facilities-title">
-            <h1>
-              They Say <br />
-              About <span>Us</span>
-            </h1>
-          </div>
-        </div>
-
-        <section className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
-          <div className="p-8 border rounded-lg dark:border-gray-700">
-            <p className="leading-loose text-gray-500 dark:text-gray-400">
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-              quibusdam ducimus libero ad tempora doloribus expedita laborum
-              saepe voluptas perferendis delectus assumenda rerum, culpa aperiam
-              dolorum, obcaecati corrupti aspernatur a.”.
-            </p>
-
-            <div className="flex items-center mt-8 -mx-2">
-              <img
-                className="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700"
-                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                alt=""
-              />
-
-              <div className="mx-2">
-                <h1 className="font-semibold text-gray-800 dark:text-white">
-                  Robert
-                </h1>
-                <span className="text-sm text-gray-500">
-                  CTO, Robert Consultency
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-8 border rounded-lg dark:border-gray-700">
-            <p className="leading-loose text-gray-500 dark:text-gray-400">
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-              quibusdam ducimus libero ad tempora doloribus expedita laborum
-              saepe voluptas perferendis delectus assumenda rerum, culpa aperiam
-              dolorum, obcaecati corrupti aspernatur a.”.
-            </p>
-
-            <div className="flex items-center mt-8 -mx-2">
-              <img
-                className="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700"
-                src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt=""
-              />
-
-              <div className="mx-2">
-                <h1 className="font-semibold text-gray-800 dark:text-white">
-                  Jeny Doe
-                </h1>
-                <span className="text-sm text-gray-500">
-                  CEO, Jeny Consultency
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-8 border rounded-lg dark:border-gray-700">
-            <p className="leading-loose text-gray-500 dark:text-gray-400">
-              “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-              quibusdam ducimus libero ad tempora doloribus expedita laborum
-              saepe voluptas perferendis delectus assumenda rerum, culpa aperiam
-              dolorum, obcaecati corrupti aspernatur a.”.
-            </p>
-
-            <div className="flex items-center mt-8 -mx-2">
-              <img
-                className="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700"
-                src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt=""
-              />
-
-              <div className="mx-2">
-                <h1 className="font-semibold text-gray-800 dark:text-white">
-                  Ema Watson{" "}
-                </h1>
-                <span className="text-sm text-gray-500">
-                  Marketing Manager at Stech
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
-    </section>
+    </div>
   );
 };

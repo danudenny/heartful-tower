@@ -1,154 +1,103 @@
 export const ContactUs = () => {
   return (
-    <div className="contact-us-container">
-      <section className="bg-white dark:bg-gray-900">
-        <div className="container px-6 py-12 mx-auto">
-          <div className="lg:flex lg:items-center lg:-mx-6">
-            <div className="lg:w-1/2 lg:mx-6 z-50">
-              <h1 className="text-2xl font-black text-gray-800 capitalize dark:text-white lg:text-3xl">
-                Contact us for <br /> more info
-              </h1>
+    <section className="text-gray-600 body-font relative">
+      <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7748591155373!2d106.98631467576534!3d-6.293292261597383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d51797fee89%3A0xb76a046752381d1f!2sHeartful%20Tower%20Bekasi!5e0!3m2!1sen!2sid!4v1697110882781!5m2!1sen!2sid"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0"
+          ></iframe>
 
-              <div className="mt-6 space-y-8 md:mt-8">
-                <p className="flex items-start -mx-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-
-                  <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
-                    Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522
-                  </span>
-                </p>
-
-                <p className="flex items-start -mx-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-
-                  <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
-                    (257) 563-7401
-                  </span>
-                </p>
-
-                <p className="flex items-start -mx-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-
-                  <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
-                    acb@example.com
-                  </span>
-                </p>
-              </div>
+          <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+            <div className="lg:w-1/2 px-6">
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                Heartful Tower Bekasi
+              </h2>
+              <p className="mt-1">
+                Jl. Pesona Metropolitan RT.004/RW.042, Bojong Rawalumbu, Kec.
+                Rawalumbu, Kota Bks, Jawa Barat 17116
+              </p>
             </div>
-
-            <div className="mt-8 lg:w-1/2 lg:mx-6">
-              <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
-                <h1 className="text-lg font-medium text-gray-700">
-                  What do you want to ask
-                </h1>
-
-                <form className="mt-6">
-                  <div className="flex-1">
-                    <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="John Doe"
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                    />
-                  </div>
-
-                  <div className="flex-1 mt-6">
-                    <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                      Email address
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="johndoe@example.com"
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                    />
-                  </div>
-
-                  <div className="flex-1 mt-6">
-                    <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                      No. Whatsapp
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="628222xxxxx"
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                    />
-                  </div>
-
-                  <div className="flex-1 mt-6">
-                    <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
-                      Domisili
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Kota Bekasi"
-                      className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                    />
-                  </div>
-
-                  <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-success rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                    get in touch
-                  </button>
-                </form>
-              </div>
+            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                EMAIL
+              </h2>
+              <a className="text-indigo-500 leading-relaxed">
+                example@email.com
+              </a>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+                PHONE
+              </h2>
+              <p className="leading-relaxed">123-456-7890</p>
             </div>
           </div>
         </div>
-      </section>
-      <div className="contact-big">
-        <h1>
-          CON
-          <br />
-          TACT
-          <br />
-          US
-        </h1>
+        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+            Message Us
+          </h2>
+          <p className="leading-relaxed mb-5 text-gray-600">
+            Dapatkan penawaran terbaik dari kami melalui formulir dibawah ini.
+          </p>
+          <div className="relative mb-4">
+            <label htmlFor="name" className="leading-7 text-sm text-gray-600">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="relative mb-4">
+            <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="relative mb-4">
+            <label
+              htmlFor="whatsapp"
+              className="leading-7 text-sm text-gray-600"
+            >
+              No. Whatsapp
+            </label>
+            <input
+              type="text"
+              id="whatsapp"
+              name="whatsapp"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div className="relative mb-4">
+            <label
+              htmlFor="domicile"
+              className="leading-7 text-sm text-gray-600"
+            >
+              Domisili
+            </label>
+            <input
+              type="text"
+              id="domicile"
+              name="domicile"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <button className="text-white bg-[#75ACD8] border-0 py-2 px-6 focus:outline-none hover:bg-success rounded-md text-lg">
+            Submit
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

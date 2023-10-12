@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.0.15",
     "@fontsource/montserrat": "^5.0.13",
     "@heroicons/react": "^2.0.18",
+    "@react-hook/media-query": "^1.1.1",
+    "fslightbox-react": "^1.7.6",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
+    "@types/fslightbox-react": "^1.7.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

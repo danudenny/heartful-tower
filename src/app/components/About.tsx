@@ -1,79 +1,65 @@
+import { Statistic } from "@/app/components/Statistic";
 import Image from "next/image";
+import React from "react";
 
-export const About = () => {
-  const statistics = [
-    {
-      name: "Total Property",
-      value: "46.000",
-      unit: "Year",
-    },
-    {
-      name: "Location",
-      value: "400",
-      unit: "Sales",
-    },
-    {
-      name: "Share",
-      value: 1,
-      unit: null,
-    },
-  ];
+interface AboutProps {
+  reference: React.MutableRefObject<null>;
+}
+
+export const About = ({ reference }: AboutProps) => {
   return (
-    <div className="about-container">
-      <div className="about flex items-center justify-center" key="about">
-        <div className="container mx-auto relative flex gap-10">
-          <div className="relative">
-            <Image
+    <div className="bg-hero" ref={reference}>
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="lg:pr-10">
+            <a
+              href="/"
+              aria-label="Go Home"
+              title="Logo"
+              className="inline-block mb-5"
+            >
+              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                <svg
+                  className="w-10 h-10 text-deep-purple-accent-400"
+                  stroke="currentColor"
+                  viewBox="0 0 52 52"
+                >
+                  <polygon
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+                  />
+                </svg>
+              </div>
+            </a>
+            <h5 className="mb-4 text-4xl font-extrabold leading-none text-white">
+              Perumnas IIDA Group
+            </h5>
+            <p className="mb-6 text-white">
+              Perumnas IIDA Group didirikan di Indonesia sejak October 2017 yang
+              merupakan anak usaha dari IIDA SANGYO Co., Ltd. dan PT Propernas
+              Griya Utama (anak perusahaan dari PERUM PERUMNAS). <br />
+              <br />
+              IIDA SANGYO Co., Ltd. merupakan pengembang property ternama di
+              bawah naungan IIDA Group Holdings yang merupakan Perusahaan Tbk di
+              Jepang. IIDA Group telah menyediakan lebih dari 46.000 tempat
+              tinggal pertahunnya, yang mana sekitar 30% penduduk Jepang
+              memiilih tempat tinggal yang diproduksi oleh IIDA Group.
+            </p>
+            <hr className="mb-5 border-gray-300" />
+            <Image src="/stat.png" width={500} height={500} alt="stat" />
+          </div>
+          <div>
+            <img
+              className="object-cover w-full h-56 rounded-lg shadow-lg sm:h-[500px]"
               src="/about-image.png"
               alt=""
-              width={600}
-              height={300}
-              className="ml-24"
             />
-            <div className="absolute -bottom-44 -left-20 mb-4 ml-4">
-              <img alt="circle-arrow" src="/circle-arrow-top-right.svg" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-5 about-title">
-            <h1>Perumnas IIDA Group</h1>
-            <p>
-              Perumnas IIDA Group didirikan di Indonesia sejak October 2017{" "}
-              <br />
-              yang merupakan anak usaha dari IIDA SANGYO Co., Ltd. dan <br /> PT
-              Propernas Griya Utama (anak perusahaan dari PERUM PERUMNAS).
-            </p>
-            <p>
-              IIDA SANGYO Co., Ltd. merupakan pengembang property ternama <br />
-              di bawah naungan IIDA Group Holdings yang merupakan Perusahaan Tbk
-              di Jepang. <br />
-              IIDA Group telah menyediakan lebih dari 46.000 tempat tinggal
-              pertahunnya, <br />
-              yang mana sekitar 30% penduduk Jepang memiilih tempat tinggal{" "}
-              <br />
-              yang diproduksi oleh IIDA Group.
-            </p>
-            <div className="flex justify-around mt-10">
-              {statistics.map((stat, index) => (
-                <div
-                  className="flex flex-col gap-2 text-[#EBBE63] text-center leading-8"
-                  key={index}
-                >
-                  <div>
-                    <h1>{stat.value}</h1>
-                  </div>
-                  <div>
-                    <h3 className="text-[#75ACD8]">
-                      {stat.name} {stat.unit ? `(${stat.unit})` : ""}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
-        <div className="about-big">
-          <h1>INSIGHT</h1>
-        </div>
+        <Statistic />
       </div>
     </div>
   );

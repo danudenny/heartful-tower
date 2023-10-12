@@ -1,9 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import React from "react";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+// @ts-ignore
+const vietnamPro = Be_Vietnam_Pro({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Heartful Tower",
@@ -20,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={vietnamPro.className}>{children}</body>
     </html>
   );
 }
