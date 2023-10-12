@@ -6,6 +6,10 @@ interface HeroProps {
 }
 
 export const Hero = ({ reference }: HeroProps) => {
+  const sendToWhatsapp = `https://wa.me/+628975740504?text=${encodeURIComponent(
+    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
+  )}`;
+
   return (
     <div
       className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 h-screen bg-hero"
@@ -53,7 +57,7 @@ export const Hero = ({ reference }: HeroProps) => {
           </div>
           <div className="flex items-center mt-10 lg:text-2xl">
             <a
-              href="/"
+              href={sendToWhatsapp}
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-success hover:bg-success-alt focus:shadow-outline focus:outline-none"
             >
               Dapatkan Informasi

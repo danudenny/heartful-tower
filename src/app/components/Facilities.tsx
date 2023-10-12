@@ -37,7 +37,6 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
             untuk para penguhni apartemen Heartful Tower Bekasi.
           </p>
         </div>
-        {isLoading && <div className="image-skeleton-loader"></div>}
 
         <div className="flex flex-wrap md:-m-2 -m-1">
           <div className="flex flex-wrap w-1/2">
@@ -45,39 +44,33 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className={`w-full object-cover h-full object-center block cursor-pointer ${
-                  isLoading ? "hidden" : ""
-                }`}
-                onLoad={handleImageLoad}
+                className="w-full object-cover h-full object-center block cursor-pointer"
                 src="/facilities/fitness.jpg"
                 width={600}
                 height={300}
+                quality={70}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className={`w-full object-cover h-full object-center block cursor-pointer ${
-                  isLoading ? "hidden" : ""
-                }`}
-                onLoad={handleImageLoad}
+                className="w-full object-cover h-full object-center block cursor-pointer"
                 src="/facilities/kindergarten.jpg"
                 width={600}
                 height={300}
+                quality={70}
               />
             </div>
             <div className="md:p-2 p-1 w-full">
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className={`w-full object-cover h-full object-center block cursor-pointer ${
-                  isLoading ? "hidden" : ""
-                }`}
-                onLoad={handleImageLoad}
+                className="w-full object-cover h-full object-center block cursor-pointer"
                 src="/facilities/multifunction.jpg"
                 width={600}
                 height={300}
+                quality={70}
               />
             </div>
           </div>
@@ -86,24 +79,20 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className={`w-full object-cover h-full object-center block cursor-pointer ${
-                  isLoading ? "hidden" : ""
-                }`}
-                onLoad={handleImageLoad}
+                className="w-full object-cover h-full object-center block cursor-pointer"
                 src="/facilities/zen-garden.jpg"
                 width={600}
                 height={300}
+                quality={70}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className={`w-full object-cover h-full object-center block cursor-pointer ${
-                  isLoading ? "hidden" : ""
-                }`}
-                onLoad={handleImageLoad}
+                className="w-full object-cover h-full object-center block cursor-pointer"
                 src="/facilities/pool.jpg"
+                quality={70}
                 width={600}
                 height={300}
               />
@@ -115,10 +104,8 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 src="/facilities/mushola.jpg"
                 width={600}
                 height={300}
-                className={`w-full object-cover h-full object-center block cursor-pointer ${
-                  isLoading ? "hidden" : ""
-                }`}
-                onLoad={handleImageLoad}
+                quality={70}
+                className="w-full object-cover h-full object-center block cursor-pointer"
               />
             </div>
           </div>
