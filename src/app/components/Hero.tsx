@@ -17,6 +17,8 @@ export const Hero = ({ reference }: HeroProps) => {
           alt="Hero Image"
           width={800}
           height={300}
+          priority={true}
+          quality={80}
           className="object-cover w-full object-bottom h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
         />
       </div>
