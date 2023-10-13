@@ -30,7 +30,7 @@ export const BackToTopButton = () => {
   return (
     isDisplayed && (
       <button
-        className="fixed bottom-4 right-4 z-50 bg-primary text-white py-2 px-4 rounded-full shadow-md cursor-pointer flex items-center"
+        className="fixed bottom-4 right-4 z-50 bg-dark text-white py-2 px-4 rounded-full shadow-md cursor-pointer flex items-center"
         onClick={handleScrollToTop}
       >
         {isMobile ? (

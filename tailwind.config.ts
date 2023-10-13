@@ -21,6 +21,7 @@ const config: Config = {
         warning: "#f4854a",
         danger: "#EB728A",
         "danger-dark": "#D12D1E",
+        dark: "#000040",
         whatsapp: "#25d366",
         facebook: "#3b5998",
         instagram: "#c13584",
@@ -34,6 +35,7 @@ const config: Config = {
         warning: "#EBBE63",
         danger: "#EB728A",
         "danger-dark": "#D12D1E",
+        dark: "#000040",
       },
       fontSize: {
         "10xl": "300px",
@@ -46,6 +48,7 @@ const config: Config = {
         warning: "#f4854a",
         danger: "#EB728A",
         "danger-dark": "#D12D1E",
+        dark: "#000040",
       },
     },
   },

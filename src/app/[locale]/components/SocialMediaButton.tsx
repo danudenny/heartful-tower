@@ -88,7 +88,7 @@ const SocialMediaButton: React.FC = () => {
       {!showIcons && (
         <button
           onClick={toggleIcons}
-          className={`py-2 px-4 bg-success text-white rounded-full flex ${
+          className={`py-2 px-4 bg-warning text-white rounded-full flex ${
             isMobile ? "text-hidden" : ""
           }`}
         >

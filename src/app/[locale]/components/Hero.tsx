@@ -32,13 +32,13 @@ export const Hero = ({ reference }: HeroProps) => {
       </div>
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-full lg:pr-5">
-          <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-warning">
+          <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-warning">
             Brand new
           </p>
           <h2 className="mb-5 font-black text-4xl tracking-wider text-white sm:text-8xl sm:leading-none">
             The Desire
             <br />
-            To<span className="text-success italic">Thrive</span>
+            To<span className="text-dark italic">Thrive</span>
           </h2>
           <p className="pr-5 text-white md:text-lg lg:text-2xl drop-shadow-2xl shadow-gray-700">
             {t("welcome")} <br />
@@ -69,7 +69,7 @@ export const Hero = ({ reference }: HeroProps) => {
             <a
               href={sendToWhatsapp}
               target="_blank"
-              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-success hover:bg-success-alt focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-dark hover:bg-success-alt focus:shadow-outline focus:outline-none"
             >
               {t("get_information")}
             </a>
