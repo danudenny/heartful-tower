@@ -6,7 +6,7 @@ interface HeroProps {
 }
 
 export const Hero = ({ reference }: HeroProps) => {
-  const sendToWhatsapp = `https://wa.me/+628975740504?text=${encodeURIComponent(
+  const sendToWhatsapp = `https://wa.me/+628975780504?text=${encodeURIComponent(
     "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
   )}`;
 
@@ -56,16 +56,19 @@ export const Hero = ({ reference }: HeroProps) => {
               src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167101/heartful/Logo-IIDA_reok4x.png"
               alt="logo-iida"
               width="100"
+              height="50"
             />
             <img
               src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"
               alt="logo-japanese-developer"
               width="200"
+              height="100"
             />
           </div>
           <div className="flex items-center mt-10 lg:text-2xl">
             <a
               href={sendToWhatsapp}
+              target="_blank"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-success hover:bg-success-alt focus:shadow-outline focus:outline-none"
             >
               Dapatkan Informasi

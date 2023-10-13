@@ -46,7 +46,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className="w-full object-cover h-full object-center block cursor-pointer"
+                className="w-full object-cover h-full object-center block cursor-pointer rounded-lg"
                 src={`${cloudinaryUrl}fitness_k5yjea.jpg`}
                 width={600}
                 height={300}
@@ -57,7 +57,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className="w-full object-cover h-full object-center block cursor-pointer"
+                className="w-full object-cover h-full object-center block cursor-pointer rounded-lg"
                 src={`${cloudinaryUrl}kindergarten_qvrzqh.jpg`}
                 width={600}
                 height={300}
@@ -68,7 +68,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className="w-full object-cover h-full object-center block cursor-pointer"
+                className="w-full object-cover h-full object-center block cursor-pointer rounded-lg"
                 src={`${cloudinaryUrl}multifunction_hrthy4.jpg`}
                 width={600}
                 height={300}
@@ -81,7 +81,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className="w-full object-cover h-full object-center block cursor-pointer"
+                className="w-full object-cover h-full object-center block cursor-pointer rounded-lg"
                 src={`${cloudinaryUrl}zen-garden_jugqc9.jpg`}
                 width={600}
                 height={300}
@@ -92,7 +92,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                className="w-full object-cover h-full object-center block cursor-pointer"
+                className="w-full object-cover h-full object-center block cursor-pointer rounded-lg"
                 src={`${cloudinaryUrl}pool_fpobpi.jpg`}
                 quality={70}
                 width={600}
@@ -107,7 +107,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 width={600}
                 height={300}
                 quality={70}
-                className="w-full object-cover h-full object-center block cursor-pointer"
+                className="w-full object-cover h-full object-center block cursor-pointer rounded-lg"
               />
             </div>
           </div>

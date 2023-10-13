@@ -38,55 +38,50 @@ export const Nav = ({
 
   const handleScrollToHero = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<null>,
+    section: string | React.SetStateAction<string>,
   ) => {
     e.preventDefault();
     scrollToHero();
-    // @ts-ignore
     setActiveLink(section);
   };
 
   const handleScrollToAbout = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<null>,
+    section: string | React.SetStateAction<string>,
   ) => {
     e.preventDefault();
     scrollToAbout();
-    // @ts-ignore
     setActiveLink(section);
   };
 
   const handleScrollToFacilities = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<null>,
+    section: string | React.SetStateAction<string>,
   ) => {
     e.preventDefault();
     scrollToFacilities();
-    // @ts-ignore
     setActiveLink(section);
   };
 
   const handleScrollToNews = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<null>,
+    section: string | React.SetStateAction<string>,
   ) => {
     e.preventDefault();
     scrollToNews();
-    // @ts-ignore
     setActiveLink(section);
   };
 
   const handleScrollToUnit = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<null>,
+    section: string | React.SetStateAction<string>,
   ) => {
     e.preventDefault();
     scrollToUnit();
-    // @ts-ignore
     setActiveLink(section);
   };
 
-  const sendToWhatsapp = `https://wa.me/+628975740504?text=${encodeURIComponent(
+  const sendToWhatsapp = `https://wa.me/+628975780504?text=${encodeURIComponent(
     "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
   )}`;
 
