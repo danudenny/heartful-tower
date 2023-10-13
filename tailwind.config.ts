@@ -15,10 +15,10 @@ const config: Config = {
       },
       backgroundColor: {
         primary: "#75ACD8",
-        success: "#73B153",
+        success: "#ACD875",
         "success-alt": "#97A934",
         accent: "A5805B",
-        warning: "#EBBE63",
+        warning: "#f4854a",
         danger: "#EB728A",
         "danger-dark": "#D12D1E",
         whatsapp: "#25d366",
@@ -37,6 +37,15 @@ const config: Config = {
       },
       fontSize: {
         "10xl": "300px",
+      },
+      textColor: {
+        primary: "#75ACD8",
+        success: "#ACD875",
+        "success-alt": "#97A934",
+        accent: "A5805B",
+        warning: "#f4854a",
+        danger: "#EB728A",
+        "danger-dark": "#D12D1E",
       },
     },
   },

@@ -51,7 +51,7 @@ export const Units = ({ reference }: UnitsProps) => {
         <FsLightbox toggler={toggler} sources={[selectedImage]} />
       )}
       <div className="bg-tower dark:bg-gray-900 rounded-lg drop-shadow-2xl shadow-gray-700">
-        <div className="px-6 pb-6 mx-auto">
+        <div className="px-6 pb-12 mx-auto">
           <div className="mt-8 xl:mt-16 lg:flex lg:-mx-12">
             <div className="lg:mx-12">
               <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
@@ -106,9 +106,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Room View
-                      </p>
                     </div>
 
                     <div>
@@ -122,9 +119,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Floor Plan
-                      </p>
                     </div>
                   </div>
                 )}
@@ -144,9 +138,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Room View
-                      </p>
                     </div>
 
                     <div>
@@ -160,9 +151,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Floor Plan
-                      </p>
                     </div>
                   </div>
                 )}
@@ -182,9 +170,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Room View
-                      </p>
                     </div>
 
                     <div>
@@ -198,9 +183,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Floor Plan
-                      </p>
                     </div>
                   </div>
                 )}
@@ -220,9 +202,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Room View
-                      </p>
                     </div>
 
                     <div>
@@ -236,9 +215,6 @@ export const Units = ({ reference }: UnitsProps) => {
                           )
                         }
                       />
-                      <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-                        Floor Plan
-                      </p>
                     </div>
                   </div>
                 )}

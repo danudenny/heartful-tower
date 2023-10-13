@@ -13,6 +13,7 @@ export const ContactUs = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="absolute inset-0"
+            title="herattower-location"
           ></iframe>
 
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">

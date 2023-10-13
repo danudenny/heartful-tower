@@ -38,9 +38,9 @@ export const Hero = ({ reference }: HeroProps) => {
           <h2 className="mb-5 font-black text-4xl tracking-wider text-white sm:text-8xl sm:leading-none">
             The Desire
             <br />
-            To<span className="text-[#73B153] italic">Thrive</span>
+            To<span className="text-success italic">Thrive</span>
           </h2>
-          <p className="pr-5 text-white md:text-lg lg:text-2xl">
+          <p className="pr-5 text-white md:text-lg lg:text-2xl drop-shadow-2xl shadow-gray-700">
             {t("welcome")} <br />
             {t("best_prices")}
           </p>
