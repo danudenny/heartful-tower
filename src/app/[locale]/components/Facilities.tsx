@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface FacilitiesProps {
   reference: React.MutableRefObject<null>;
@@ -9,6 +10,7 @@ interface FacilitiesProps {
 export const Facilities = ({ reference }: FacilitiesProps) => {
   const [toggler, setToggler] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const t = useTranslations("Facilities");
 
   const handleImageLoad = () => {
     setIsLoading(false);
@@ -32,11 +34,10 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex w-full mb-20 flex-wrap items-center">
           <h1 className="sm:text-3xl text-2xl font-black title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
-            Balance In Your Life
+            {t("title")}
           </h1>
           <p className="lg:w-1/3 mx-auto leading-relaxed text-base mr-0 text-end">
-            Nikmati keseimbangan hidup anda dengan fasilitas yang telah tersedia
-            untuk para penguhni apartemen Heartful Tower Bekasi.
+            {t("desc")}
           </p>
         </div>
 

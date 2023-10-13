@@ -1,11 +1,15 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { JP } from "country-flag-icons/react/3x2";
+import { useTranslations } from "next-intl";
 
 interface HeroProps {
   reference: React.MutableRefObject<null>;
 }
 
 export const Hero = ({ reference }: HeroProps) => {
+  const t = useTranslations("Hero");
   const sendToWhatsapp = `https://wa.me/+628975780504?text=${encodeURIComponent(
     "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
   )}`;
@@ -37,18 +41,14 @@ export const Hero = ({ reference }: HeroProps) => {
             To<span className="text-[#73B153] italic">Thrive</span>
           </h2>
           <p className="pr-5 text-white md:text-lg lg:text-2xl">
-            Selamat datang di Heartful Tower Bekasi. <br />
-            Apartement dengan harga terbaik.
+            {t("welcome")} <br />
+            {t("best_prices")}
           </p>
-          <div className="flex mb-5">
+          <div className="flex mb-5 gap-2">
             <p className="text-white md:text-lg lg:text-2xl">
-              Oleh Developer Jepang.
+              {t("japan_developer")}
             </p>
-            <img
-              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-Flag_i9s7y4.png"
-              alt="japan-flag"
-              width="45"
-            />
+            <JP width={30} height={30} />
           </div>
 
           <div className="flex items-center mt-10 z-30 gap-3">
@@ -71,7 +71,7 @@ export const Hero = ({ reference }: HeroProps) => {
               target="_blank"
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-success hover:bg-success-alt focus:shadow-outline focus:outline-none"
             >
-              Dapatkan Informasi
+              {t("get_information")}
             </a>
           </div>
         </div>

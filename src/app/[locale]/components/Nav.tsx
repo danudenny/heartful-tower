@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { LanguageSelector } from "@/app/[locale]/components/LanguageSelector";
+import { useTranslations } from "next-intl";
 
 interface NavProps {
   scrollToHero: () => any;
@@ -20,6 +22,7 @@ export const Nav = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavFixed, setIsNavFixed] = useState(false);
   const [activeLink, setActiveLink] = useState("hero");
+  const t = useTranslations("Nav");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -187,6 +190,9 @@ export const Nav = ({
           </ul>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
+              <LanguageSelector />
+            </li>
+            <li>
               <a
                 href={sendToWhatsapp}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-primary hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
@@ -194,7 +200,7 @@ export const Nav = ({
                 title="Sign up"
                 target="_blank"
               >
-                Dapatkan Promo
+                {t("get_promo")}
               </a>
             </li>
           </ul>
@@ -327,7 +333,7 @@ export const Nav = ({
                           title="Get Promo"
                           target="_blank"
                         >
-                          Dapatkan Promo
+                          {t("get_promo")}
                         </a>
                       </li>
                     </ul>

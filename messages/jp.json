@@ -1,0 +1,36 @@
+{
+  "Nav": {
+    "get_promo": "プロモーションを手に入れる"
+  },
+  "Hero": {
+    "welcome": "ハートフルタワー・ベカシへようこそ。",
+    "best_prices": "最高の価格でのアパートメント。",
+    "japan_developer": "日本の開発者によるもの。",
+    "get_information": "情報を取得する"
+  },
+  "Siteplan": {
+    "siteplan": "サイトプラン"
+  },
+  "About": {
+    "p1": "Perumnas IIDA Groupは、2017年10月に設立された、IIDA SANGYO Co., Ltd.およびPT Propernas Griya Utama（PERUM PERUMNASの子会社）の子会社です。",
+    "p2": "IIDA SANGYO Co., Ltd.は、日本の公開企業であるIIDA Group Holdingsの傘下で高名な不動産開発業者です。IIDA Groupは年間46,000軒以上の住宅を提供し、日本の人口の約30%がIIDA Groupによって製造された住宅を選んでいます。"
+  },
+  "Stat": {
+    "provides": "提供します",
+    "over": "上",
+    "japan": "日本",
+    "the": "その",
+    "house": "住宅 / 年",
+    "location": "日本国内の所在地",
+    "quality": "品質",
+    "price": "価格"
+  },
+  "Facilities": {
+    "title": "あなたの人生のバランス",
+    "desc": "ハートフル タワー ブカシ アパートメントの居住者が利用できる施設を利用して、バランスの取れた生活をお楽しみください。"
+  },
+  "Contact": {
+    "title": "メッセージをお送りください",
+    "desc": "以下のフォームから最高のオファーを入手してください"
+  }
+}
