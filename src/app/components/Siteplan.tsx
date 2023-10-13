@@ -42,10 +42,9 @@ export const Siteplan = () => {
                 src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167105/heartful/siteplan_ioyqjo.png"
                 width={400}
                 height={300}
-                layout="responsive"
-                objectFit="contain"
                 quality={100}
                 alt="siteplan"
+                className="w-full"
               />
             </div>
           </div>

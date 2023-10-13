@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -81,47 +82,27 @@ export const Footer = () => {
             <div className="flex items-center mt-1 space-x-3">
               <a
                 href="/"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                <Image
-                  src="/social/facebook.svg"
-                  width={20}
-                  height={20}
-                  alt="fb"
-                />
+                <FaFacebook />
               </a>
               <a
                 href="/"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                <Image
-                  src="/social/instagram.svg"
-                  width={20}
-                  height={20}
-                  alt="fb"
-                />
+                <FaInstagram />
               </a>
               <a
                 href="/"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                <Image
-                  src="/social/tiktok.svg"
-                  width={20}
-                  height={20}
-                  alt="fb"
-                />
+                <FaTiktok />
               </a>
               <a
                 href="/"
-                className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
               >
-                <Image
-                  src="/social/linkedin.svg"
-                  width={20}
-                  height={20}
-                  alt="fb"
-                />
+                <FaLinkedin />
               </a>
             </div>
           </div>

@@ -92,9 +92,9 @@ export const Nav = ({
 
   return (
     <div
-      className={`${
-        isNavFixed ? "bg-opacity-90" : "bg-transparent"
-      } fixed top-0 left-0 w-full transition-all duration-500 ease-in-out bg-white mx-auto z-50 lg:rounded-lg items-center`}
+      className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out mx-auto z-50 lg:rounded-lg items-center ${
+        isNavFixed ? "bg-opacity-90 bg-white" : "bg-transparent"
+      }`}
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
