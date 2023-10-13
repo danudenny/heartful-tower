@@ -105,7 +105,7 @@ export const Nav = ({
             className="inline-flex items-center"
           >
             <Image
-              src="/heartful-logo.png"
+              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167099/heartful/heartful-logo_kewplr.png"
               alt="logo"
               width={300}
               height={150}

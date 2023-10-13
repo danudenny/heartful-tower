@@ -14,15 +14,17 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
     setIsLoading(false);
   };
 
+  const cloudinaryUrl = `https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167085/heartful/facilities/`;
+
   const images = [
-    "/facilities/fitness.jpg",
-    "/facilities/kindergarten.jpg",
-    "/facilities/multifunction.jpg",
-    "/facilities/zen-garden.jpg",
-    "/facilities/pool.jpg",
-    "/facilities/mushola.jpg",
-    "/facilities/pool-2.jpg",
-    "/facilities/zen-garden-2.jpg",
+    `${cloudinaryUrl}fitness_k5yjea.jpg`,
+    `${cloudinaryUrl}kindergarten_qvrzqh.jpg`,
+    `${cloudinaryUrl}multifunction_hrthy4.jpg`,
+    `${cloudinaryUrl}zen-garden_jugqc9.jpg`,
+    `${cloudinaryUrl}pool_fpobpi.jpg`,
+    `${cloudinaryUrl}mushola_hu1fjg.jpg`,
+    `${cloudinaryUrl}pool-2_tq04wf.jpg`,
+    `${cloudinaryUrl}zen-garden-2_ug09s6.jpg`,
   ];
 
   return (
@@ -45,7 +47,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
                 className="w-full object-cover h-full object-center block cursor-pointer"
-                src="/facilities/fitness.jpg"
+                src={`${cloudinaryUrl}fitness_k5yjea.jpg`}
                 width={600}
                 height={300}
                 quality={70}
@@ -56,7 +58,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
                 className="w-full object-cover h-full object-center block cursor-pointer"
-                src="/facilities/kindergarten.jpg"
+                src={`${cloudinaryUrl}kindergarten_qvrzqh.jpg`}
                 width={600}
                 height={300}
                 quality={70}
@@ -67,7 +69,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
                 className="w-full object-cover h-full object-center block cursor-pointer"
-                src="/facilities/multifunction.jpg"
+                src={`${cloudinaryUrl}multifunction_hrthy4.jpg`}
                 width={600}
                 height={300}
                 quality={70}
@@ -80,7 +82,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
                 className="w-full object-cover h-full object-center block cursor-pointer"
-                src="/facilities/zen-garden.jpg"
+                src={`${cloudinaryUrl}zen-garden_jugqc9.jpg`}
                 width={600}
                 height={300}
                 quality={70}
@@ -91,7 +93,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
                 className="w-full object-cover h-full object-center block cursor-pointer"
-                src="/facilities/pool.jpg"
+                src={`${cloudinaryUrl}pool_fpobpi.jpg`}
                 quality={70}
                 width={600}
                 height={300}
@@ -101,7 +103,7 @@ export const Facilities = ({ reference }: FacilitiesProps) => {
               <Image
                 onClick={() => setToggler(!toggler)}
                 alt="gallery"
-                src="/facilities/mushola.jpg"
+                src={`${cloudinaryUrl}mushola_hu1fjg.jpg`}
                 width={600}
                 height={300}
                 quality={70}

@@ -17,7 +17,7 @@ export const Hero = ({ reference }: HeroProps) => {
     >
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-2/5 lg:max-w-full lg:absolute xl:px-0">
         <Image
-          src="/bird-eye-stand-3.png"
+          src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167096/heartful/bird-eye-stand-3_ap8pzl.png"
           alt="Hero Image"
           width={800}
           height={300}
@@ -44,13 +44,21 @@ export const Hero = ({ reference }: HeroProps) => {
             <p className="text-white md:text-lg lg:text-2xl">
               Oleh Developer Jepang.
             </p>
-            <img src="/Japanese-Flag.png" alt="japan-flag" width="45" />
+            <img
+              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-Flag_i9s7y4.png"
+              alt="japan-flag"
+              width="45"
+            />
           </div>
 
           <div className="flex items-center mt-10 z-30 gap-3">
-            <img src="/Logo-IIDA.png" alt="logo-iida" width="100" />
             <img
-              src="/Japanese-No.1-Developer.png"
+              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167101/heartful/Logo-IIDA_reok4x.png"
+              alt="logo-iida"
+              width="100"
+            />
+            <img
+              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"
               alt="logo-japanese-developer"
               width="200"
             />

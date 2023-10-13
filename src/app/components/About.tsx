@@ -49,13 +49,20 @@ export const About = ({ reference }: AboutProps) => {
               memiilih tempat tinggal yang diproduksi oleh IIDA Group.
             </p>
             <hr className="mb-5 border-gray-300" />
-            <Image src="/stat.png" width={500} height={500} alt="stat" />
+            <Image
+              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167103/heartful/stat_rnwdxc.png"
+              width={500}
+              height={500}
+              alt="stat"
+            />
           </div>
           <div>
-            <img
-              className="object-cover w-full h-56 rounded-lg shadow-lg sm:h-[500px]"
-              src="/about-image.png"
+            <Image
+              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167095/heartful/about-image_agh8st.png"
               alt=""
+              className="object-cover w-full h-56 rounded-lg shadow-lg sm:h-[500px]"
+              width={500}
+              height={500}
             />
           </div>
         </div>
