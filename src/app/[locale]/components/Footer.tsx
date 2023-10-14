@@ -1,8 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { JP } from "country-flag-icons/react/3x2";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("Hero");
   return (
     <div className="bg-hero">
       <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -14,24 +17,44 @@ export const Footer = () => {
               title="Company"
               className="inline-flex items-center"
             >
-              <Image
-                src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167099/heartful/heartful-logo_kewplr.png"
-                alt="logo"
-                width={300}
-                height={150}
-                priority={true}
-                className="w-auto h-8 sm:h-10"
-              />
+              <div className="flex items-center gap-3">
+                <Image
+                  src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697274718/HEARTFUL-TOWER-LOGO-White_1_gnev4v.png"
+                  alt="logo"
+                  width={300}
+                  height={150}
+                  priority={true}
+                  className="w-auto h-10 sm:h-10"
+                />
+                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-lg font-semibold text-white sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
+                  Heartful Tower <br /> Bekasi
+                </h3>
+              </div>
             </a>
             <div className="mt-6 lg:max-w-sm">
-              <p className="text-sm text-gray-800">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+              <p className="pr-5 text-base drop-shadow-2xl shadow-gray-700">
+                {t("welcome")} <br />
+                {t("best_prices")}
               </p>
-              <p className="mt-4 text-sm text-gray-800">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
-              </p>
+              <div className="flex mb-5 gap-2">
+                <p className="text-base">{t("japan_developer")}</p>
+                <JP width={30} height={30} />
+              </div>
+
+              <div className="flex items-center mt-1 z-30 gap-2">
+                <img
+                  src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167101/heartful/Logo-IIDA_reok4x.png"
+                  alt="logo-iida"
+                  width="50"
+                  height="20"
+                />
+                <img
+                  src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"
+                  alt="logo-japanese-developer"
+                  width="100"
+                  height="50"
+                />
+              </div>
             </div>
           </div>
           <div className="space-y-2 text-sm">

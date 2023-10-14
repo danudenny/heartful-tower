@@ -90,7 +90,7 @@ export const Nav = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out mx-auto z-50 lg:rounded-lg items-center ${
+      className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out mx-auto z-40 lg:rounded-lg items-center ${
         isNavFixed ? "bg-opacity-90 bg-white" : "bg-transparent"
       }`}
     >
@@ -102,14 +102,35 @@ export const Nav = ({
             title="Company"
             className="inline-flex items-center"
           >
-            <Image
-              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167099/heartful/heartful-logo_kewplr.png"
-              alt="logo"
-              width={300}
-              height={150}
-              priority={true}
-              className="w-auto h-8 sm:h-10"
-            />
+            {isNavFixed ? (
+              <div className="flex items-center gap-3">
+                <Image
+                  src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697274785/heartful-logo_kewplr_1_uzfx0i.png"
+                  alt="logo"
+                  width={300}
+                  height={150}
+                  priority={true}
+                  className="w-auto h-10 sm:h-10"
+                />
+                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-lg font-semibold text-dark sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
+                  Heartful Tower <br /> Bekasi
+                </h3>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Image
+                  src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697274718/HEARTFUL-TOWER-LOGO-White_1_gnev4v.png"
+                  alt="logo"
+                  width={300}
+                  height={150}
+                  priority={true}
+                  className="w-auto h-10 sm:h-10"
+                />
+                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-lg font-semibold text-white sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
+                  Heartful Tower <br /> Bekasi
+                </h3>
+              </div>
+            )}
           </a>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>

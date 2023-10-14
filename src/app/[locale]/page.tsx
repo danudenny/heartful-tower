@@ -9,10 +9,11 @@ import { ContactUs } from "@/app/[locale]/components/ContactUs";
 import { Footer } from "@/app/[locale]/components/Footer";
 import { Units } from "@/app/[locale]/components/Units";
 import { Nav } from "@/app/[locale]/components/Nav";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { VideoPlayer } from "@/app/[locale]/components/VideoPlayer";
 import { BackToTopButton } from "@/app/[locale]/components/BackToTopButton";
 import SocialMediaButton from "@/app/[locale]/components/SocialMediaButton";
+import Modal from "@/app/[locale]/components/Modal";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -20,13 +21,27 @@ export default function Home() {
   const faciltiesRef = useRef(null);
   const newsRef = useRef(null);
   const unitRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const scrollToSection = (ref: any) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <main>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
       <Nav
         scrollToHero={() => scrollToSection(heroRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}
