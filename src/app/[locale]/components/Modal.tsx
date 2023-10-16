@@ -44,7 +44,7 @@ const Modal = ({ isOpen, onClose }: Props) => {
             <Image
               src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697440886/Heartfultower-Billboard_ximt0n.jpg"
               alt="modal-popup"
-              width={400}
+              width={350}
               height={600}
               sizes={"100vw"}
               quality={90}

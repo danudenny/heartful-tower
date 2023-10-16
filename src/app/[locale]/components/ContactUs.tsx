@@ -7,7 +7,7 @@ export const ContactUs = () => {
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7748591155373!2d106.98631467576534!3d-6.293292261597383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d51797fee89%3A0xb76a046752381d1f!2sHeartful%20Tower%20Bekasi!5e0!3m2!1sen!2sid!4v1697110882781!5m2!1sen!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.067791842157!2d106.98742147576486!3d-6.254799361241469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d9b13dc528b%3A0xda8b934f21da2231!2sRevo%20Mall!5e0!3m2!1sen!2sid!4v1697447201281!5m2!1sen!2sid"
             width="100%"
             height="100%"
             loading="lazy"
@@ -19,11 +19,16 @@ export const ContactUs = () => {
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
+                Marketing Gallery & Show Unit <br />
                 Heartful Tower Bekasi
               </h2>
               <p className="mt-1">
-                Jl. Pesona Metropolitan RT.004/RW.042, Bojong Rawalumbu, Kec.
-                Rawalumbu, Kota Bks, Jawa Barat 17116
+                Revo Mall
+                <br />
+                Ruko No. 55, Lt. UG Kios No 178 - 179
+                <br />
+                Jl. Ahmad Yani No.Kav. 1, RT.005/RW.002, Pekayon Jaya, Kec.
+                Bekasi Sel., Kota Bks, Jawa Barat
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

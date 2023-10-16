@@ -45,13 +45,13 @@ export const Footer = () => {
                 <img
                   src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167101/heartful/Logo-IIDA_reok4x.png"
                   alt="logo-iida"
-                  width="50"
+                  width="100"
                   height="20"
                 />
                 <img
                   src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"
                   alt="logo-japanese-developer"
-                  width="100"
+                  width="150"
                   height="50"
                 />
               </div>
@@ -86,15 +86,18 @@ export const Footer = () => {
             <div className="flex flex-col">
               <p className="mr-1 text-gray-800">Address:</p>
               <a
-                href="https://maps.app.goo.gl/neyPDMt1unn4JQwm9"
+                href="https://maps.app.goo.gl/U3daX3YBPtUW8CMa7"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Our address"
                 title="Our address"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                Jl. Pesona Metropolitan RT.004/RW.042, Bojong Rawalumbu, Kec.
-                Rawalumbu, Kota Bks, Jawa Barat 17116
+                <p className="mt-1">
+                  Revo Mall
+                  <br />
+                  Ruko No. 55, Lt. UG Kios No 178 - 179
+                </p>
               </a>
             </div>
           </div>

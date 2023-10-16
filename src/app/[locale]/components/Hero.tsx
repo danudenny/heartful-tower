@@ -16,7 +16,7 @@ export const Hero = ({ reference }: HeroProps) => {
 
   return (
     <div
-      className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 h-screen bg-hero"
+      className="relative flex flex-col-reverse pt-16 lg:pt-16 lg:flex-col lg:pb-0 h-screen bg-hero"
       ref={reference}
     >
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-2/5 lg:max-w-full lg:absolute xl:px-0">
@@ -32,10 +32,7 @@ export const Hero = ({ reference }: HeroProps) => {
       </div>
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-full lg:pr-5">
-          <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-warning">
-            Brand new
-          </p>
-          <h2 className="mb-5 font-black text-4xl tracking-wider text-white sm:text-8xl sm:leading-none">
+          <h2 className="mb-5 font-black text-4xl tracking-tight text-white sm:text-8xl sm:leading-none">
             The Desire
             <br />
             To<span className="text-dark italic">Thrive</span>
@@ -51,13 +48,8 @@ export const Hero = ({ reference }: HeroProps) => {
             <JP width={30} height={30} />
           </div>
 
-          <div className="flex items-center mt-10 z-30 gap-3">
-            <img
-              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167101/heartful/Logo-IIDA_reok4x.png"
-              alt="logo-iida"
-              width="100"
-              height="50"
-            />
+          <div className="flex flex-col items-start mt-10 z-30 gap-3">
+            <p className="italic font-medium text-dark">Developed By : </p>
             <img
               src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"
               alt="logo-japanese-developer"

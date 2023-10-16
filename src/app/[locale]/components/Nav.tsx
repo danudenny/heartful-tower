@@ -107,12 +107,12 @@ export const Nav = ({
                 <Image
                   src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697274785/heartful-logo_kewplr_1_uzfx0i.png"
                   alt="logo"
-                  width={300}
+                  width={400}
                   height={150}
                   priority={true}
                   className="w-auto h-10 sm:h-10"
                 />
-                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-lg font-semibold text-dark sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
+                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-sm font-semibold text-dark sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
                   Heartful Tower <br /> Bekasi
                 </h3>
               </div>
@@ -121,12 +121,12 @@ export const Nav = ({
                 <Image
                   src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697274718/HEARTFUL-TOWER-LOGO-White_1_gnev4v.png"
                   alt="logo"
-                  width={300}
+                  width={400}
                   height={150}
                   priority={true}
                   className="w-auto h-10 sm:h-10"
                 />
-                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-lg font-semibold text-white sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
+                <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-sm font-semibold text-white sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
                   Heartful Tower <br /> Bekasi
                 </h3>
               </div>
@@ -166,21 +166,6 @@ export const Nav = ({
             <li>
               <a
                 href="/"
-                aria-label="Typical Floor"
-                title="Typical Floor"
-                onClick={(e) => handleScrollToUnit(e, "unit")}
-                className={`font-bold tracking-wide ${
-                  activeLink === "unit"
-                    ? "text-white bg-dark rounded-full py-2 px-3"
-                    : "text-dark"
-                } transition-colors duration-200 hover:text-white`}
-              >
-                Typical Floor
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
                 aria-label="Facilities"
                 title="Facilities"
                 onClick={(e) => handleScrollToFacilities(e, "facilities")}
@@ -191,6 +176,21 @@ export const Nav = ({
                 } transition-colors duration-200 hover:text-white`}
               >
                 Facilities
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+                aria-label="Typical Floor"
+                title="Typical Floor"
+                onClick={(e) => handleScrollToUnit(e, "unit")}
+                className={`font-bold tracking-wide ${
+                  activeLink === "unit"
+                    ? "text-white bg-dark rounded-full py-2 px-3"
+                    : "text-dark"
+                } transition-colors duration-200 hover:text-white`}
+              >
+                Units
               </a>
             </li>
             <li>
@@ -319,21 +319,21 @@ export const Nav = ({
                       <li>
                         <a
                           href="/"
-                          aria-label="Typical Floor"
-                          title="Typical Floor"
-                          className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
-                        >
-                          Typical Floor
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
                           aria-label="Facilities"
                           title="Facilities"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           Facilities
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/"
+                          aria-label="Typical Floor"
+                          title="Typical Floor"
+                          className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
+                        >
+                          Units
                         </a>
                       </li>
                       <li>
