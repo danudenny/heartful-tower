@@ -14,6 +14,7 @@ import { VideoPlayer } from "@/app/[locale]/components/VideoPlayer";
 import { BackToTopButton } from "@/app/[locale]/components/BackToTopButton";
 import SocialMediaButton from "@/app/[locale]/components/SocialMediaButton";
 import Modal from "@/app/[locale]/components/Modal";
+import { OtherProject } from "@/app/[locale]/components/OtherProject";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -57,6 +58,7 @@ export default function Home() {
       <Units reference={unitRef} />
       <Testimonial />
       <News reference={newsRef} />
+      <OtherProject />
       <ContactUs />
       <Footer />
       <BackToTopButton />
