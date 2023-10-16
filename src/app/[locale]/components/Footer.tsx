@@ -69,18 +69,18 @@ export const Footer = () => {
                 title="Our phone"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                123-456-7890
+                (021) 3987 1188
               </a>
             </div>
             <div className="flex">
-              <p className="mr-1 text-gray-800">Email:</p>
+              <p className="mr-1 text-gray-800">Whatsapp:</p>
               <a
-                href="mailto:info@lorem.mail"
+                href="wa.me/6281119933099"
                 aria-label="Our email"
                 title="Our email"
                 className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                example@email.com
+                +6281119933099
               </a>
             </div>
             <div className="flex flex-col">

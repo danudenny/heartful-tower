@@ -10,7 +10,7 @@ interface HeroProps {
 
 export const Hero = ({ reference }: HeroProps) => {
   const t = useTranslations("Hero");
-  const sendToWhatsapp = `https://wa.me/+628975780504?text=${encodeURIComponent(
+  const sendToWhatsapp = `https://wa.me/+6281119933099?text=${encodeURIComponent(
     "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
   )}`;
 
