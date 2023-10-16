@@ -40,7 +40,7 @@ export const Siteplan = () => {
                 </span>
               </h2>
             </div>
-            <div>
+            <div className="flex">
               <Image
                 src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167105/heartful/siteplan_ioyqjo.png"
                 width={400}
