@@ -46,11 +46,6 @@ export const Units = ({ reference }: UnitsProps) => {
     setToggler(!toggler);
   };
 
-  const openTypicalFloorLightbox = (imageSrc: React.SetStateAction<string>) => {
-    setSelectedImage(imageSrc);
-    setTogglerTypicalFloor(!togglerTypicalFloor);
-  };
-
   return (
     <div
       className="justify-center items-center flex flex-col space-y-4 p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-24 h-2/3 bg-contour"
@@ -282,7 +277,6 @@ export const Units = ({ reference }: UnitsProps) => {
         slides={typicalFloorImages}
         styles={{ container: { backgroundColor: "rgba(0, 0, 0, .8)" } }}
       />
-      {/*<FsLightbox toggler={togglerTypicalFloor} sources={typicalFloorImages} />*/}
     </div>
   );
 };
