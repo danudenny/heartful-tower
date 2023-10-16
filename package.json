@@ -22,7 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
-    "react-spring-lightbox": "^1.8.0"
+    "yet-another-react-lightbox": "^3.14.0"
   },
   "devDependencies": {
     "@types/fslightbox-react": "^1.7.4",
