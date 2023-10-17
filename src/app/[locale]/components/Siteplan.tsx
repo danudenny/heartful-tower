@@ -1,8 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
+import { CldImage } from "next-cloudinary";
 
 export const Siteplan = () => {
   const t = useTranslations("Siteplan");
@@ -31,14 +31,11 @@ export const Siteplan = () => {
           </p>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <Image
-            src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167105/heartful/siteplan_ioyqjo.png"
-            width={600}
-            height={300}
-            quality={100}
-            alt="siteplan"
-            className="w-full cursor-pointer"
-            onClick={() => setOpen(true)}
+          <CldImage
+            width="600"
+            height="600"
+            src="v1697167105/heartful/siteplan_ioyqjo.png"
+            alt=""
           />
         </div>
       </div>

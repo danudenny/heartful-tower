@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
+import { CldImage } from "next-cloudinary";
 
 interface Props {
   isOpen: boolean;
@@ -41,22 +41,13 @@ const Modal = ({ isOpen, onClose }: Props) => {
               className="absolute top-4 right-4 text-dark text-2xl cursor-pointer bg-white rounded-full p-1"
               onClick={onClose}
             />
-            <Image
-              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697440886/Heartfultower-Billboard_ximt0n.jpg"
+            <CldImage
+              src="v1697440886/Heartfultower-Billboard_ximt0n.jpg"
               alt="modal-popup"
-              width={350}
+              width={300}
               height={600}
-              sizes={"100vw"}
-              quality={90}
               priority={true}
             />
-            {/*<button*/}
-            {/*  onClick={onClose}*/}
-            {/*  className="absolute flex items-center justify-center bottom-8 mx-auto bg-dark text-white rounded-full px-4 py-2 text-xl font-bold tracking-widest hover:bg-white hover:text-dark transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 cursor-pointer w-2/3 h-8 sm:h-10 uppercase"*/}
-            {/*>*/}
-            {/*  Get Information*/}
-            {/*  <AiFillRightCircle className="ml-2" />*/}
-            {/*</button>*/}
           </motion.div>
         </motion.div>
       )}

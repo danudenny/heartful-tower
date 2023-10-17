@@ -11,6 +11,7 @@ import {
 } from "./CarouselArrowButton";
 import Autoplay from "embla-carousel-autoplay";
 import imageByIndex from "@/app/datas/facilities_image";
+import { CldImage } from "next-cloudinary";
 
 type PropType = {
   slides: number[];
@@ -48,10 +49,12 @@ const Carousel: React.FC<PropType> = (props) => {
               <div className="embla__slide__number">
                 <span>{index + 1}</span>
               </div>
-              <img
+              <CldImage
                 className="embla__slide__img"
                 src={imageByIndex(index)}
                 alt="Your alt text"
+                width="600"
+                height="600"
               />
             </div>
           ))}

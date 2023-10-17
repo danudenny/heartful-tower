@@ -1,4 +1,4 @@
-const cloudinaryUrl = `https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167085/heartful/facilities/`;
+const cloudinaryUrl = `v1697167085/heartful/facilities/`;
 
 export const images: string[] = [
   `${cloudinaryUrl}kindergarten_qvrzqh.jpg`,

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { LanguageSelector } from "@/app/[locale]/components/LanguageSelector";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 interface NavProps {
   scrollToHero: () => any;
@@ -96,7 +97,7 @@ export const Nav = ({
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <a
+          <Link
             href="/"
             aria-label="Company"
             title="Company"
@@ -131,10 +132,10 @@ export const Nav = ({
                 </h3>
               </div>
             )}
-          </a>
+          </Link>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
-              <a
+              <Link
                 href="#"
                 onClick={(e) => handleScrollToHero(e, "hero")}
                 className={`font-bold tracking-wide ${
@@ -146,10 +147,10 @@ export const Nav = ({
                 title="Home"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 onClick={(e) => handleScrollToAbout(e, "about")}
                 className={`font-bold tracking-wide ${
                   activeLink === "about"
@@ -161,10 +162,10 @@ export const Nav = ({
                 title="About Us"
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="Facilities"
                 title="Facilities"
@@ -176,10 +177,10 @@ export const Nav = ({
                 } transition-colors duration-200 hover:text-white`}
               >
                 Facilities
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="Typical Floor"
                 title="Typical Floor"
@@ -191,10 +192,10 @@ export const Nav = ({
                 } transition-colors duration-200 hover:text-white`}
               >
                 Units
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 aria-label="News"
                 title="News"
@@ -206,7 +207,7 @@ export const Nav = ({
                 } transition-colors duration-200 hover:text-white`}
               >
                 News
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="items-center hidden space-x-8 lg:flex">
@@ -214,7 +215,7 @@ export const Nav = ({
               <LanguageSelector />
             </li>
             <li>
-              <a
+              <Link
                 href={sendToWhatsapp}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-dark hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
@@ -222,7 +223,7 @@ export const Nav = ({
                 target="_blank"
               >
                 {t("get_promo")}
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="lg:hidden">
