@@ -9,8 +9,8 @@ export const VideoPlayer = () => {
         loop
         muted
         className="w-full h-full object-cover"
-        width="1920"
-        height="1080"
+        width="640"
+        height="360"
         autoPlay="on-scroll"
         controls={false}
       />

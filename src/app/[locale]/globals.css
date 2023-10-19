@@ -221,3 +221,20 @@
 .testimonial-bg {
     background: linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)
 }
+
+.underline-with-svg {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.underline-with-svg::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust the height of the underline as needed */
+    background: url('https://res.cloudinary.com/killtdj/image/upload/v1697711990/needle-underline_gjt07o.svg') center center no-repeat;
+    background-size: 100% auto;
+}

@@ -9,11 +9,13 @@
     "get_information": "Get Information"
   },
   "Siteplan": {
-    "siteplan": "Siteplan"
+    "siteplan": "Siteplan",
+    "p1": "Discover the thoughtfully designed site plan of Heartful Tower in Bekasi, offering a harmonious living environment with convenient amenities, green spaces, and strategic building arrangements. Your guide to a vibrant community in the heart of Bekasi."
   },
   "About": {
     "p1": "Perumnas IIDA Group was established in Indonesia in October 2017 as a subsidiary of IIDA SANGYO Co., Ltd. and PT Propernas Griya Utama (a subsidiary of PERUM PERUMNAS).",
-    "p2": "IIDA SANGYO Co., Ltd. is a renowned property developer under the IIDA Group Holdings umbrella, which is a publicly traded company in Japan. IIDA Group provides more than 46,000 residences each year, and approximately 30% of the Japanese population chooses homes produced by IIDA Group."
+    "p2": "IIDA SANGYO Co., Ltd. is a renowned property developer under the IIDA Group Holdings umbrella, which is a publicly traded company in Japan. IIDA Group provides more than 46,000 residences each year, and approximately 30% of the Japanese population chooses homes produced by IIDA Group.",
+    "p3": "IIDA Groups provides more than 46.000 houses anually. This means that about 30% of people who purchase detached house in Japan choose houses of IIDA Group"
   },
   "Stat": {
     "provides": "Provides",
@@ -32,5 +34,8 @@
   "Contact": {
     "title": "Message Us",
     "desc": "Get the best offer from us via the form below."
+  },
+  "Units": {
+    "p1": "At Heartful Tower, we understand that every resident is unique.\nThat's why we offer a variety of unit types to cater to different lifestyles and preferences.\nNo matter which unit you choose, you'll be welcomed into a community\nthat values quality, comfort, and the joy of urban living."
   }
 }

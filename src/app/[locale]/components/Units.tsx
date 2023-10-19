@@ -4,12 +4,14 @@ import FsLightbox from "fslightbox-react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface UnitsProps {
   reference: React.MutableRefObject<null>;
 }
 
 export const Units = ({ reference }: UnitsProps) => {
+  const t = useTranslations("Units");
   const [selectedTab, setSelectedTab] = useState("Studio");
   const [isMobile, setIsMobile] = useState(false);
   const [selectedImages, setSelectedImages] = useState<string[]>([]);
@@ -55,15 +57,7 @@ export const Units = ({ reference }: UnitsProps) => {
         <h1 className="text-xl font-bold text-center text-dark uppercase sm:text-4xl">
           Our Units
         </h1>
-        <p className="text-sm text-center my-4">
-          At <strong>Heartful Tower</strong>, we understand that every resident
-          is unique. <br />
-          That's why we offer a variety of unit types to cater to different
-          lifestyles and preferences. <br />
-          No matter which unit you choose, you'll be welcomed into a community{" "}
-          <br />
-          that values quality, comfort, and the joy of urban living.
-        </p>
+        <p className="text-sm text-center my-4 w-3/5">{t("p1")}</p>
       </div>
 
       {selectedImages && selectedTab === "Studio" && (

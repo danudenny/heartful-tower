@@ -31,12 +31,7 @@ export const Siteplan = () => {
             Heartful Tower Siteplan
           </h1>
           <p className="max-w-2xl mb-6 font-light text-dark lg:mb-8 md:text-sm lg:text-lg dark:text-gray-400">
-            Discover the thoughtfully designed site plan of Heartful Tower in
-            Bekasi, <br />
-            offering a harmonious living environment with convenient amenities,{" "}
-            <br />
-            green spaces, and strategic building arrangements. <br />
-            Your guide to a vibrant community in the heart of Bekasi.
+            {t("p1")}
           </p>
         </div>
       </div>

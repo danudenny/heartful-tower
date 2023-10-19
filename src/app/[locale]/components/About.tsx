@@ -1,7 +1,9 @@
 import { Statistic } from "@/app/[locale]/components/Statistic";
-import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslations } from "next-intl";
+import { CldImage } from "next-cloudinary";
+import { BiPlusCircle } from "react-icons/bi";
+import { useMediaQuery } from "@react-hook/media-query";
 
 interface AboutProps {
   reference: React.MutableRefObject<null>;
@@ -9,62 +11,87 @@ interface AboutProps {
 
 export const About = ({ reference }: AboutProps) => {
   const t = useTranslations("About");
+  const [showDesc, setShowDesc] = useState(false);
+
+  const isMobile = useMediaQuery("only screen and (max-width: 500px)");
+
   return (
-    <div className="bg-hero" ref={reference}>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div className="lg:pr-10">
-            <a
-              href="/"
-              aria-label="Go Home"
-              title="Logo"
-              className="inline-block mb-5"
-            >
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-                <svg
-                  className="w-10 h-10 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
+    <>
+      <div className="bg-hero" ref={reference}>
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-2 items-center text-right">
+            <div className="lg:pr-10">
+              <h5 className="mb-4 text-4xl font-extrabold leading-none text-white">
+                Perumnas IIDA Group
+              </h5>
+              <p className="mb-6 text-white text-lg">
+                {t("p1")}
+                <br />
+                <br />
+                {t("p2")}
+              </p>
+            </div>
+            <div>
+              <CldImage
+                src="v1697712378/Group_1171274735_xzx2ux.png"
+                alt="chart 1"
+                width={600}
+                height={600}
+                priority={true}
+              />
+              {!isMobile && (
+                <div className="absolute -mt-96 ml-96">
+                  <BiPlusCircle
+                    className="text-white cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out"
+                    size={32}
+                    onClick={() => setShowDesc(!showDesc)}
                   />
-                </svg>
-              </div>
-            </a>
-            <h5 className="mb-4 text-4xl font-extrabold leading-none text-white">
-              Perumnas IIDA Group
-            </h5>
-            <p className="mb-6 text-white">
-              {t("p1")}
-              <br />
-              <br />
-              {t("p2")}
-            </p>
-            <hr className="mb-5 border-gray-300" />
-            <Image
-              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167103/heartful/stat_rnwdxc.png"
-              width={500}
-              height={500}
-              alt="stat"
-            />
-          </div>
-          <div>
-            <Image
-              src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167095/heartful/about-image_agh8st.png"
-              alt=""
-              className="object-cover w-full h-56 rounded-lg shadow-lg sm:h-[500px]"
-              width={500}
-              height={500}
-            />
+                  <p
+                    className={`text-dark bg-tower px-2 py-1 font-bold rounded-md mt-2 cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out ${
+                      showDesc ? "" : "hidden"
+                    }`}
+                  >
+                    Next Project
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-        <Statistic />
       </div>
-    </div>
+      <div className="bg-hero">
+        <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0">
+          <div className="grid gap-10 lg:grid-cols-2 items-center">
+            <div
+              className={`flex p-10 bg-gray-100 drop-shadow-2xl shadow-gray-700 rounded-lg items-center gap-6 ${
+                isMobile ? "flex-col" : "flex-row"
+              }`}
+            >
+              <CldImage
+                src="v1697706731/chart1_ypz3ce.png"
+                alt="chart 1"
+                width={isMobile ? 200 : 300}
+                height={isMobile ? 200 : 600}
+                priority={true}
+              />
+              <CldImage
+                src="v1697711595/chart2_luiyii.png"
+                alt="chart 2"
+                width={isMobile ? 150 : 200}
+                height={isMobile ? 150 : 200}
+                priority={true}
+              />
+            </div>
+            <div className="lg:pr-10">
+              <h5 className="mb-4 text-4xl font-extrabold leading-none text-white underline-with-svg">
+                No.1 Share
+              </h5>
+              <p className="mb-6 text-white text-lg">{t("p3")}</p>
+            </div>
+          </div>
+          <Statistic />
+        </div>
+      </div>
+    </>
   );
 };
