@@ -1,7 +1,45 @@
 import { useTranslations } from "next-intl";
+import React, { useRef, useState } from "react";
 
 export const ContactUs = () => {
   const t = useTranslations("Contact");
+  const inputDomiciliRef = useRef<HTMLInputElement>(null);
+  const inputEmailRef = useRef<HTMLInputElement>(null);
+  const inputWhatsappRef = useRef<HTMLInputElement>(null);
+  const inputNameRef = useRef<HTMLInputElement>(null);
+
+  const [successMessage, setSuccessMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const subscribeUser = async (e: { preventDefault: () => void }) => {
+    setIsLoading(true);
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/contact", {
+        body: JSON.stringify({
+          email: inputEmailRef.current?.value,
+          name: inputNameRef.current?.value,
+          whatsapp: inputWhatsappRef.current?.value,
+          domicili: inputDomiciliRef.current?.value,
+        }),
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        method: "POST",
+      });
+      if (res) {
+        setIsLoading(false);
+        setSuccessMessage("Thank You for Contacting Us!");
+      }
+    } catch (error) {
+      console.error(error);
+      setIsLoading(false);
+      setSuccessMessage("");
+    }
+  };
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -43,65 +81,86 @@ export const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-            {t("title")}
-          </h2>
-          <p className="leading-relaxed mb-5 text-gray-600">{t("desc")}</p>
-          <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
+        <form onSubmit={subscribeUser}>
+          <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+              {t("title")}
+            </h2>
+            <p className="leading-relaxed mb-5 text-gray-600">{t("desc")}</p>
+            <div className="relative mb-4">
+              <label htmlFor="name" className="leading-7 text-sm text-gray-600">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autoCapitalize="off"
+                ref={inputNameRef}
+                autoCorrect="off"
+                className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="relative mb-4">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-600"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                ref={inputEmailRef}
+                className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="relative mb-4">
+              <label
+                htmlFor="whatsapp"
+                className="leading-7 text-sm text-gray-600"
+              >
+                No. Whatsapp
+              </label>
+              <input
+                type="text"
+                id="whatsapp"
+                name="whatsapp"
+                ref={inputWhatsappRef}
+                className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="relative mb-4">
+              <label
+                htmlFor="domicile"
+                className="leading-7 text-sm text-gray-600"
+              >
+                Domisili
+              </label>
+              <input
+                type="text"
+                id="domicile"
+                name="domicile"
+                ref={inputDomiciliRef}
+                className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="flex flex-col gap-3">
+              <button
+                type="submit"
+                value=""
+                disabled={isLoading}
+                className={`text-white bg-[#75ACD8] border-0 py-2 px-6 focus:outline-none hover:bg-success rounded-md text-lg ${
+                  isLoading ? "cursor-not-allowed" : ""
+                }`}
+              >
+                {isLoading ? "Loading..." : "Submit"}
+              </button>
+              <div className="text-green-500">{successMessage}</div>
+            </div>
           </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="whatsapp"
-              className="leading-7 text-sm text-gray-600"
-            >
-              No. Whatsapp
-            </label>
-            <input
-              type="text"
-              id="whatsapp"
-              name="whatsapp"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="domicile"
-              className="leading-7 text-sm text-gray-600"
-            >
-              Domisili
-            </label>
-            <input
-              type="text"
-              id="domicile"
-              name="domicile"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <button className="text-white bg-[#75ACD8] border-0 py-2 px-6 focus:outline-none hover:bg-success rounded-md text-lg">
-            Submit
-          </button>
-        </div>
+        </form>
       </div>
     </section>
   );
