@@ -60,9 +60,6 @@ export const About = ({ reference }: AboutProps) => {
                     onClick={() => setShowDesc(!showDesc)}
                   />
                   <p
-                    data-aos="fade-up"
-                    data-aos-delay="50"
-                    data-aos-duration="1000"
                     className={`text-dark bg-tower px-2 py-1 font-bold rounded-md mt-2 cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out ${
                       showDesc ? "" : "hidden"
                     }`}
