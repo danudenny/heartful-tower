@@ -17,16 +17,8 @@ export const Projects: IProject[] = [
   },
   {
     img: "https://res.cloudinary.com/killtdj/image/upload/v1697483878/e8d0c6173693147.Y3JvcCw2OTEyLDU0MDYsMCw1MzA_p0mtxz.jpg",
-    badge: "Next Project",
-    city: "Tangerang",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?",
-    status: false,
-  },
-  {
-    img: "https://res.cloudinary.com/killtdj/image/upload/v1697483878/e8d0c6173693147.Y3JvcCw2OTEyLDU0MDYsMCw1MzA_p0mtxz.jpg",
-    badge: "Next Project",
-    city: "Cikarang",
+    badge: "",
+    city: "",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?",
     status: false,

@@ -3,7 +3,7 @@ import useEmblaCarousel, {
   EmblaCarouselType,
   EmblaOptionsType,
 } from "embla-carousel-react";
-import { DotButton, useDotButton } from "./CarouselDotButton";
+import { useDotButton } from "./CarouselDotButton";
 import {
   NextButton,
   PrevButton,
@@ -46,9 +46,6 @@ const Carousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                <span>{index + 1}</span>
-              </div>
               <CldImage
                 className="embla__slide__img"
                 src={imageByIndex(index)}
@@ -64,18 +61,6 @@ const Carousel: React.FC<PropType> = (props) => {
       <div className="bottom-0 flex justify-between absolute bg-dark cursor-pointer">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-      </div>
-
-      <div className="embla__dots">
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            onClick={() => onDotButtonClick(index)}
-            className={"embla__dot".concat(
-              index === selectedIndex ? " embla__dot--selected" : "",
-            )}
-          />
-        ))}
       </div>
     </div>
   );

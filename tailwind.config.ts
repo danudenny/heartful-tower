@@ -22,10 +22,6 @@ const config: Config = {
         danger: "#EB728A",
         "danger-dark": "#D12D1E",
         dark: "#000040",
-        whatsapp: "#25d366",
-        facebook: "#3b5998",
-        instagram: "#c13584",
-        linkedin: "#0077b5",
       },
       borderColor: {
         primary: "#75ACD8",

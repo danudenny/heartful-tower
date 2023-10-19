@@ -12,7 +12,7 @@ interface UnitsProps {
 export const Units = ({ reference }: UnitsProps) => {
   const [selectedTab, setSelectedTab] = useState("Studio");
   const [isMobile, setIsMobile] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedImages, setSelectedImages] = useState<string[]>([]);
   const [toggler, setToggler] = useState(false);
   const [togglerTypicalFloor, setTogglerTypicalFloor] = useState(false);
 
@@ -41,8 +41,8 @@ export const Units = ({ reference }: UnitsProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const openLightbox = (imageSrc: React.SetStateAction<string>) => {
-    setSelectedImage(imageSrc);
+  const openLightbox = (imageSrcs: string[]) => {
+    setSelectedImages(imageSrcs);
     setToggler(!toggler);
   };
 
@@ -66,17 +66,17 @@ export const Units = ({ reference }: UnitsProps) => {
         </p>
       </div>
 
-      {selectedImage && selectedTab === "Studio" && (
-        <FsLightbox toggler={toggler} sources={[selectedImage]} />
+      {selectedImages && selectedTab === "Studio" && (
+        <FsLightbox toggler={toggler} sources={selectedImages} />
       )}
-      {selectedImage && selectedTab === "1 Bedroom" && (
-        <FsLightbox toggler={toggler} sources={[selectedImage]} />
+      {selectedImages && selectedTab === "1 Bedroom" && (
+        <FsLightbox toggler={toggler} sources={selectedImages} />
       )}
-      {selectedImage && selectedTab === "2 Bedroom" && (
-        <FsLightbox toggler={toggler} sources={[selectedImage]} />
+      {selectedImages && selectedTab === "2 Bedroom" && (
+        <FsLightbox toggler={toggler} sources={selectedImages} />
       )}
-      {selectedImage && selectedTab === "3 Bedroom" && (
-        <FsLightbox toggler={toggler} sources={[selectedImage]} />
+      {selectedImages && selectedTab === "3 Bedroom" && (
+        <FsLightbox toggler={toggler} sources={selectedImages} />
       )}
       <div className="bg-tower dark:bg-gray-900 rounded-lg drop-shadow-2xl shadow-gray-700">
         <div className="px-6 pb-12 mx-auto">
@@ -135,9 +135,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167094/heartful/unit/studio_j5ksb6.jpg"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167094/heartful/unit/studio_j5ksb6.jpg",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216861/Unit-Studio-A-21_qrolie.png",
+                          ])
                         }
                       />
                     </div>
@@ -150,9 +151,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216861/Unit-Studio-A-21_qrolie.png"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216861/Unit-Studio-A-21_qrolie.png",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167094/heartful/unit/studio_j5ksb6.jpg",
+                          ])
                         }
                       />
                     </div>
@@ -171,9 +173,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/1br_jjf5mx.jpg"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/1br_jjf5mx.jpg",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-1-BR-A_nectvc.png",
+                          ])
                         }
                       />
                     </div>
@@ -186,9 +189,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-1-BR-A_nectvc.png"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-1-BR-A_nectvc.png",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/1br_jjf5mx.jpg",
+                          ])
                         }
                       />
                     </div>
@@ -207,9 +211,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/2br_bdqnbv.jpg"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/2br_bdqnbv.jpg",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-2-BR-A-Nett37_ivezfr.png",
+                          ])
                         }
                       />
                     </div>
@@ -222,9 +227,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-2-BR-A-Nett37_ivezfr.png"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-2-BR-A-Nett37_ivezfr.png",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/2br_bdqnbv.jpg",
+                          ])
                         }
                       />
                     </div>
@@ -243,9 +249,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/3br_wts5o6.jpg"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/3br_wts5o6.jpg",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216862/Unit-3-BR_fjrz75.png",
+                          ])
                         }
                       />
                     </div>
@@ -258,9 +265,10 @@ export const Units = ({ reference }: UnitsProps) => {
                         src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216862/Unit-3-BR_fjrz75.png"
                         alt=""
                         onClick={() =>
-                          openLightbox(
+                          openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216862/Unit-3-BR_fjrz75.png",
-                          )
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/3br_wts5o6.jpg",
+                          ])
                         }
                       />
                     </div>

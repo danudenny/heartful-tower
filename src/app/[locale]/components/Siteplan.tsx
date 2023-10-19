@@ -16,8 +16,17 @@ export const Siteplan = () => {
 
   return (
     <section className="bg-tower dark:bg-gray-900">
-      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div className="mr-auto place-self-center lg:col-span-7">
+      <div className="sm:flex-row flex-col flex items-center px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:container">
+        <div className="lg:mt-0 lg:w-2/3 w-full lg:col-span-5 lg:flex cursor-pointer">
+          <CldImage
+            width="900"
+            height="600"
+            src="v1697167105/heartful/siteplan_ioyqjo.png"
+            alt=""
+            onClick={() => setOpen(true)}
+          />
+        </div>
+        <div className="mr-auto place-self-center lg:col-span-7 bg-gray-200 rounded-lg p-12 drop-shadow-2xl shadow-gray-700">
           <h1 className="max-w-2xl mb-4 text-4xl text-dark font-black uppercase tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
             Heartful Tower Siteplan
           </h1>
@@ -29,14 +38,6 @@ export const Siteplan = () => {
             green spaces, and strategic building arrangements. <br />
             Your guide to a vibrant community in the heart of Bekasi.
           </p>
-        </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <CldImage
-            width="600"
-            height="600"
-            src="v1697167105/heartful/siteplan_ioyqjo.png"
-            alt=""
-          />
         </div>
       </div>
       <Lightbox

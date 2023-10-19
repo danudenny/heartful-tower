@@ -9,7 +9,7 @@ interface NavProps {
   scrollToHero: () => any;
   scrollToAbout: () => any;
   scrollToFacilities: () => any;
-  scrollToNews: () => any;
+  // scrollToNews: () => any;
   scrollToUnit: () => any;
 }
 
@@ -17,7 +17,7 @@ export const Nav = ({
   scrollToHero,
   scrollToAbout,
   scrollToFacilities,
-  scrollToNews,
+  // scrollToNews,
   scrollToUnit,
 }: NavProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,14 +67,14 @@ export const Nav = ({
     setActiveLink(section);
   };
 
-  const handleScrollToNews = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<string>,
-  ) => {
-    e.preventDefault();
-    scrollToNews();
-    setActiveLink(section);
-  };
+  // const handleScrollToNews = (
+  //   e: React.MouseEvent<HTMLAnchorElement>,
+  //   section: string | React.SetStateAction<string>,
+  // ) => {
+  //   e.preventDefault();
+  //   scrollToNews();
+  //   setActiveLink(section);
+  // };
 
   const handleScrollToUnit = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -92,7 +92,7 @@ export const Nav = ({
   return (
     <div
       className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out mx-auto z-40 lg:rounded-lg items-center ${
-        isNavFixed ? "bg-opacity-90 bg-white" : "bg-transparent"
+        isNavFixed ? "bg-white" : "bg-transparent"
       }`}
     >
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -194,21 +194,21 @@ export const Nav = ({
                 Units
               </Link>
             </li>
-            <li>
-              <Link
-                href="/"
-                aria-label="News"
-                title="News"
-                onClick={(e) => handleScrollToNews(e, "news")}
-                className={`font-bold tracking-wide ${
-                  activeLink === "news"
-                    ? "text-white bg-dark rounded-full py-2 px-3"
-                    : "text-dark"
-                } transition-colors duration-200 hover:text-white`}
-              >
-                News
-              </Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link*/}
+            {/*    href="/"*/}
+            {/*    aria-label="News"*/}
+            {/*    title="News"*/}
+            {/*    onClick={(e) => handleScrollToNews(e, "news")}*/}
+            {/*    className={`font-bold tracking-wide ${*/}
+            {/*      activeLink === "news"*/}
+            {/*        ? "text-white bg-dark rounded-full py-2 px-3"*/}
+            {/*        : "text-dark"*/}
+            {/*    } transition-colors duration-200 hover:text-white`}*/}
+            {/*  >*/}
+            {/*    News*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
           </ul>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
