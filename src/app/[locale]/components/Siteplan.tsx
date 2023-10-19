@@ -17,7 +17,12 @@ export const Siteplan = () => {
   return (
     <section className="bg-tower dark:bg-gray-900">
       <div className="sm:flex-row flex-col flex items-center px-4 py-8 mx-auto lg:gap-8 lg:py-16 lg:container">
-        <div className="lg:mt-0 lg:w-2/3 w-full lg:col-span-5 lg:flex cursor-pointer">
+        <div
+          className="lg:mt-0 lg:w-2/3 w-full lg:col-span-5 lg:flex cursor-pointer"
+          data-aos="flip-left"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
           <CldImage
             width="900"
             height="600"
@@ -27,10 +32,20 @@ export const Siteplan = () => {
           />
         </div>
         <div className="mr-auto place-self-center lg:col-span-7 bg-gray-200 rounded-lg p-12 drop-shadow-2xl shadow-gray-700">
-          <h1 className="max-w-2xl mb-4 text-4xl text-dark font-black uppercase tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+          <h1
+            className="max-w-2xl mb-4 text-4xl text-dark font-black uppercase tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+            data-aos="zoom-in-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
             Heartful Tower Siteplan
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-dark lg:mb-8 md:text-sm lg:text-lg dark:text-gray-400">
+          <p
+            className="max-w-2xl mb-6 font-light text-dark lg:mb-8 md:text-sm lg:text-lg dark:text-gray-400"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
             {t("p1")}
           </p>
         </div>

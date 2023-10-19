@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.0.18",
     "@react-hook/media-query": "^1.1.1",
     "@types/nodemailer": "^6.4.13",
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.5.1",
     "country-flag-icons": "^1.5.7",
     "embla-carousel": "^8.0.0-rc14",
@@ -30,6 +31,7 @@
     "yet-another-react-lightbox": "^3.14.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.6",
     "@types/fslightbox-react": "^1.7.4",
     "@types/node": "^20",
     "@types/react": "^18",

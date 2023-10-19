@@ -12,8 +12,12 @@ import { VideoPlayer } from "@/app/[locale]/components/VideoPlayer";
 import { BackToTopButton } from "@/app/[locale]/components/BackToTopButton";
 import SocialMediaButton from "@/app/[locale]/components/SocialMediaButton";
 import Modal from "@/app/[locale]/components/Modal";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function Home() {
+  AOS.init();
+
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const faciltiesRef = useRef(null);

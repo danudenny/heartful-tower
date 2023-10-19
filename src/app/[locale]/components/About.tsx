@@ -21,10 +21,20 @@ export const About = ({ reference }: AboutProps) => {
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-2 items-center text-right">
             <div className="lg:pr-10">
-              <h5 className="mb-4 text-4xl font-extrabold leading-none text-white">
+              <h5
+                className="mb-4 text-4xl font-extrabold leading-none text-white"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 Perumnas IIDA Group
               </h5>
-              <p className="mb-6 text-white text-lg">
+              <p
+                className="mb-6 text-white text-lg"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 {t("p1")}
                 <br />
                 <br />
@@ -34,10 +44,13 @@ export const About = ({ reference }: AboutProps) => {
             <div>
               <CldImage
                 src="v1697712378/Group_1171274735_xzx2ux.png"
-                alt="chart 1"
+                alt="about image"
                 width={600}
                 height={600}
                 priority={true}
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
               />
               {!isMobile && (
                 <div className="absolute -mt-96 ml-96">
@@ -47,6 +60,9 @@ export const About = ({ reference }: AboutProps) => {
                     onClick={() => setShowDesc(!showDesc)}
                   />
                   <p
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
                     className={`text-dark bg-tower px-2 py-1 font-bold rounded-md mt-2 cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out ${
                       showDesc ? "" : "hidden"
                     }`}
@@ -73,6 +89,9 @@ export const About = ({ reference }: AboutProps) => {
                 width={isMobile ? 200 : 300}
                 height={isMobile ? 200 : 600}
                 priority={true}
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
               />
               <CldImage
                 src="v1697711595/chart2_luiyii.png"
@@ -80,13 +99,29 @@ export const About = ({ reference }: AboutProps) => {
                 width={isMobile ? 150 : 200}
                 height={isMobile ? 150 : 200}
                 priority={true}
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
               />
             </div>
             <div className="lg:pr-10">
-              <h5 className="mb-4 text-4xl font-extrabold leading-none text-white underline-with-svg">
+              <h5
+                className="mb-4 text-4xl font-extrabold leading-none text-white underline-with-svg"
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-center"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 No.1 Share
               </h5>
-              <p className="mb-6 text-white text-lg">{t("p3")}</p>
+              <p
+                className="mb-6 text-white text-lg"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
+                {t("p3")}
+              </p>
             </div>
           </div>
           <Statistic />
