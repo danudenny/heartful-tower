@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const ContactUs = () => {
   const t = useTranslations("Contact");
@@ -52,6 +52,19 @@ export const ContactUs = () => {
       setSuccessMessage("");
     }
   };
+
+  useEffect(() => {
+    if (successMessage) {
+      setIsLoading(false);
+
+      const timeout = setTimeout(() => {
+        setSuccessMessage("");
+      }, 2000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [successMessage]);
+
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -172,7 +185,13 @@ export const ContactUs = () => {
               >
                 {isLoading ? "Loading..." : "Submit"}
               </button>
-              <div className="text-green-500">{successMessage}</div>
+              <div
+                className={`transition-opacity duration-300 ease-in-out ${
+                  successMessage ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                {successMessage}
+              </div>
             </div>
           </div>
         </form>
