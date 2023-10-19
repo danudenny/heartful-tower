@@ -22,6 +22,7 @@ export default function Home() {
   // const newsRef = useRef(null);
   const unitRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const scrollToSection = (ref: any) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -43,6 +44,12 @@ export default function Home() {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 2000);
+    });
+  });
+
   return (
     <main>
       <Modal isOpen={isModalOpen} onClose={closeModal} />
@@ -57,12 +64,12 @@ export default function Home() {
       <Siteplan />
       <About reference={aboutRef} />
       <Facilities reference={faciltiesRef} />
-      <VideoPlayer />
+      {scrolled && <VideoPlayer />}
       <Units reference={unitRef} />
       {/*<Testimonial />*/}
       {/*<News reference={newsRef} />*/}
       {/*<OtherProject />*/}
-      <ContactUs />
+      {scrolled && <ContactUs />}
       <Footer />
       <BackToTopButton />
       <SocialMediaButton />
