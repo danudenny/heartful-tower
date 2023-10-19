@@ -33,6 +33,14 @@ export const ContactUs = () => {
       if (res) {
         setIsLoading(false);
         setSuccessMessage("Thank You for Contacting Us!");
+        // @ts-ignore
+        inputDomiciliRef.current?.value = "";
+        // @ts-ignore
+        inputEmailRef.current?.value = "";
+        // @ts-ignore
+        inputNameRef.current?.value = "";
+        // @ts-ignore
+        inputWhatsappRef.current?.value = "";
       }
     } catch (error) {
       console.error(error);
@@ -81,8 +89,11 @@ export const ContactUs = () => {
             </div>
           </div>
         </div>
-        <form onSubmit={subscribeUser}>
-          <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <form
+          onSubmit={subscribeUser}
+          className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+        >
+          <div>
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
               {t("title")}
             </h2>
