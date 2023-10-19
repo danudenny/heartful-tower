@@ -16,8 +16,6 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 export default function Home() {
-  AOS.init();
-
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const faciltiesRef = useRef(null);
@@ -35,6 +33,10 @@ export default function Home() {
     }, 1000);
 
     return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    AOS.init();
   }, []);
 
   const closeModal = () => {
