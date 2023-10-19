@@ -33,14 +33,18 @@ export const ContactUs = () => {
       if (res) {
         setIsLoading(false);
         setSuccessMessage("Thank You for Contacting Us!");
-        // @ts-ignore
-        inputDomiciliRef.current?.value = "";
-        // @ts-ignore
-        inputEmailRef.current?.value = "";
-        // @ts-ignore
-        inputNameRef.current?.value = "";
-        // @ts-ignore
-        inputWhatsappRef.current?.value = "";
+        if (inputDomiciliRef.current) {
+          inputDomiciliRef.current.value = "";
+        }
+        if (inputEmailRef.current) {
+          inputEmailRef.current.value = "";
+        }
+        if (inputWhatsappRef.current) {
+          inputWhatsappRef.current.value = "";
+        }
+        if (inputNameRef.current) {
+          inputNameRef.current.value = "";
+        }
       }
     } catch (error) {
       console.error(error);
