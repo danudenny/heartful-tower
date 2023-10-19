@@ -19,6 +19,7 @@ export const LanguageSelector = () => {
         className="bg-transparent p-3 font-semibold"
         onChange={handleSelectChange}
         value={locale}
+        aria-label="Select Language"
       >
         <option value="id">ID</option>
         <option value="en">EN</option>

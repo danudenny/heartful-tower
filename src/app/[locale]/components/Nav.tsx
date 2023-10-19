@@ -253,10 +253,10 @@ export const Nav = ({
                 <div className="p-5 bg-white border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <a
+                      <Link
                         href="/"
-                        aria-label="Company"
-                        title="Company"
+                        aria-label="Company Mobile"
+                        title="Company Mobile"
                         className="inline-flex items-center"
                       >
                         <svg
@@ -277,7 +277,7 @@ export const Nav = ({
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                           Company
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <div>
                       <button
@@ -298,57 +298,57 @@ export const Nav = ({
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <a
+                        <Link
                           href="/"
                           aria-label="Home"
                           title="Home"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           Home
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           href="/"
                           aria-label="About Us"
                           title="About Us"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           About Us
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           href="/"
                           aria-label="Facilities"
                           title="Facilities"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           Facilities
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           href="/"
                           aria-label="Typical Floor"
                           title="Typical Floor"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           Units
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           href="/"
                           aria-label="News"
                           title="News"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           News
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           href={sendToWhatsapp}
                           className="inline-flex mt-3 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white bg-dark transition duration-200 rounded-full shadow-mtext-[#73B153] hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
                           aria-label="Get Promo"
@@ -356,7 +356,7 @@ export const Nav = ({
                           target="_blank"
                         >
                           {t("get_promo")}
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </nav>
