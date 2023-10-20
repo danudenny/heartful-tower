@@ -56,15 +56,15 @@ export const Hero = ({ reference }: HeroProps) => {
               <JP width={30} height={30} />
             </div>
 
-            <div className="flex flex-col items-start mt-10 z-30 gap-3">
-              <p className="italic font-medium text-dark">Developed By : </p>
-              <img
-                src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"
-                alt="logo-japanese-developer"
-                width="200"
-                height="100"
-              />
-            </div>
+            {/*<div className="flex flex-col items-start mt-10 z-30 gap-3">*/}
+            {/*  <p className="italic font-medium text-dark">Developed By : </p>*/}
+            {/*  <img*/}
+            {/*    src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"*/}
+            {/*    alt="logo-japanese-developer"*/}
+            {/*    width="200"*/}
+            {/*    height="100"*/}
+            {/*  />*/}
+            {/*</div>*/}
             <div className="flex items-center mt-10 lg:text-2xl">
               <a
                 href={sendToWhatsapp}
