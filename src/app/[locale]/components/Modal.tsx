@@ -47,6 +47,7 @@ const Modal = ({ isOpen, onClose }: Props) => {
               width={300}
               height={600}
               priority={true}
+              quality={80}
             />
           </motion.div>
         </motion.div>

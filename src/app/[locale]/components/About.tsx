@@ -105,7 +105,7 @@ export const About = ({ reference }: AboutProps) => {
               <h5
                 className="mb-4 text-4xl font-extrabold leading-none text-white underline-with-svg"
                 data-aos="fade-up"
-                data-aos-anchor-placement="bottom-center"
+                data-aos-anchor-placement="top-center"
                 data-aos-delay="50"
                 data-aos-duration="1000"
               >
