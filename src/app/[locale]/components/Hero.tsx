@@ -18,7 +18,7 @@ export const Hero = ({ reference }: HeroProps) => {
   return (
     <AnimatePresence>
       <div
-        className="relative flex flex-col-reverse pt-16 lg:pt-16 lg:flex-col lg:pb-0 h-screen bg-hero"
+        className="relative flex flex-col-reverse pt-10 lg:pt-16 lg:flex-col lg:pb-0 h-screen bg-hero"
         ref={reference}
       >
         <CldImage

@@ -23,6 +23,10 @@ export const Siteplan = () => {
           data-aos-delay="50"
           data-aos-duration="1000"
         >
+          <div className="absolute text-success font-black uppercase jusify-center bottom-10 left-20">
+            <p className="text-2xl">Greenery Area</p>
+            <p className="text-5xl">30%</p>
+          </div>
           <CldImage
             width="900"
             height="600"

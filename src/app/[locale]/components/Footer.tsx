@@ -41,6 +41,9 @@ export const Footer = () => {
                 <JP width={30} height={30} />
               </div>
 
+              <div>
+                <span>Developed by:</span>
+              </div>
               <div className="flex items-center mt-1 z-30 gap-2">
                 <img
                   src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167101/heartful/Logo-IIDA_reok4x.png"
