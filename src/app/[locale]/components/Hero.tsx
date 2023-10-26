@@ -4,6 +4,7 @@ import { JP } from "country-flag-icons/react/3x2";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
+import { useParams } from "next/navigation";
 
 interface HeroProps {
   reference: React.MutableRefObject<null>;
@@ -14,6 +15,11 @@ export const Hero = ({ reference }: HeroProps) => {
   const sendToWhatsapp = `https://wa.me/+6281119933099?text=${encodeURIComponent(
     "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
   )}`;
+
+  // get parameters
+  const params = useParams();
+  const { locale } = params;
+  const isJp = locale === "jp";
 
   return (
     <AnimatePresence>
@@ -53,7 +59,7 @@ export const Hero = ({ reference }: HeroProps) => {
               <p className="text-dark md:text-lg lg:text-2xl">
                 {t("japan_developer")}
               </p>
-              <JP width={30} height={30} />
+              {!isJp && <JP width={30} height={30} />}
             </div>
 
             {/*<div className="flex flex-col items-start mt-10 z-30 gap-3">*/}

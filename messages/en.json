@@ -1,6 +1,10 @@
 {
   "Nav": {
-    "get_promo": "Get Promotion"
+    "get_promo": "Get Promotion",
+    "home": "Home",
+    "about": "About",
+    "facilities": "Facilities",
+    "units": "Units"
   },
   "Hero": {
     "welcome": "Welcome to Heartful Tower Bekasi.",
@@ -13,9 +17,12 @@
     "p1": "Discover the thoughtfully designed site plan of Heartful Tower in Bekasi, offering a harmonious living environment with convenient amenities, green spaces, and strategic building arrangements. Your guide to a vibrant community in the heart of Bekasi."
   },
   "About": {
-    "p1": "Perumnas IIDA Group was established in Indonesia in October 2017 as a subsidiary of IIDA SANGYO Co., Ltd. and PT Propernas Griya Utama (a subsidiary of PERUM PERUMNAS).",
+    "title1": "Perumnas IIDA Group",
+    "p1": "Perumnas IIDA Group was established in Indonesia in October 2017 and is a subsidiary of IIDA SANGYO Co., Ltd. PT Propernas Griya Utama (a subsidiary of PERUM PERUMNAS) also participated in investing capital in Perumnas IIDA Group as a partner.",
     "p2": "IIDA SANGYO Co., Ltd. is a renowned property developer under the IIDA Group Holdings umbrella, which is a publicly traded company in Japan. IIDA Group provides more than 46,000 residences each year, and approximately 30% of the Japanese population chooses homes produced by IIDA Group.",
-    "p3": "IIDA Groups provides more than 46.000 houses anually. This means that about 30% of people who purchase detached house in Japan choose houses of IIDA Group"
+    "p3": "IIDA Groups provides more than 46.000 houses anually. This means that about 30% of people who purchase detached house in Japan choose houses of IIDA Group",
+    "title2": "No.1 Share",
+    "next_project": "Next Project"
   },
   "Stat": {
     "provides": "Provides",
@@ -25,7 +32,9 @@
     "house": "Houses / Year",
     "location": "Location in Japan",
     "quality": "Quality",
-    "price": "Price"
+    "price": "Price",
+    "good1": "Good",
+    "good2": "Good"
   },
   "Facilities": {
     "title": "Balance In Your Life",
@@ -33,9 +42,18 @@
   },
   "Contact": {
     "title": "Message Us",
-    "desc": "Get the best offer from us via the form below."
+    "desc": "Get the best offer from us via the form below.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Whatsapp No.",
+    "address": "Domicile",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "success": "Thank you for your message. We will contact you soon."
   },
   "Units": {
-    "p1": "At Heartful Tower, we understand that every resident is unique.\nThat's why we offer a variety of unit types to cater to different lifestyles and preferences.\nNo matter which unit you choose, you'll be welcomed into a community\nthat values quality, comfort, and the joy of urban living."
+    "title": "Our Units",
+    "p1": "At Heartful Tower, we understand that every resident is unique.\nThat's why we offer a variety of unit types to cater to different lifestyles and preferences.\nNo matter which unit you choose, you'll be welcomed into a community\nthat values quality, comfort, and the joy of urban living.",
+    "typical_floor": "Typical Floor"
   }
 }

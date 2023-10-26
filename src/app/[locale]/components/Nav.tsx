@@ -142,11 +142,11 @@ export const Nav = ({
                   activeLink === "hero"
                     ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
-                } transition-colors duration-200 hover:text-white`}
+                } transition-colors duration-200 hover:text-primary`}
                 aria-label="Home"
                 title="Home"
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
@@ -156,12 +156,12 @@ export const Nav = ({
                   activeLink === "about"
                     ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
-                } transition-colors duration-200 hover:text-white`}
+                } transition-colors duration-200 hover:text-primary`}
                 href="/"
                 aria-label="About Us"
                 title="About Us"
               >
-                About Us
+                {t("about")}
               </Link>
             </li>
             <li>
@@ -174,9 +174,9 @@ export const Nav = ({
                   activeLink === "facilities"
                     ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
-                } transition-colors duration-200 hover:text-white`}
+                } transition-colors duration-200 hover:text-primary`}
               >
-                Facilities
+                {t("facilities")}
               </Link>
             </li>
             <li>
@@ -189,9 +189,9 @@ export const Nav = ({
                   activeLink === "unit"
                     ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
-                } transition-colors duration-200 hover:text-white`}
+                } transition-colors duration-200 hover:text-primary`}
               >
-                Units
+                {t("units")}
               </Link>
             </li>
             {/*<li>*/}
@@ -304,7 +304,7 @@ export const Nav = ({
                           title="Home"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
-                          Home
+                          {t("home")}
                         </Link>
                       </li>
                       <li>
@@ -314,7 +314,7 @@ export const Nav = ({
                           title="About Us"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
-                          About Us
+                          {t("about")}
                         </Link>
                       </li>
                       <li>
@@ -324,7 +324,7 @@ export const Nav = ({
                           title="Facilities"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
-                          Facilities
+                          {t("facilties")}
                         </Link>
                       </li>
                       <li>
@@ -334,19 +334,19 @@ export const Nav = ({
                           title="Typical Floor"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
-                          Units
+                          {t("units")}
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          href="/"
-                          aria-label="News"
-                          title="News"
-                          className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
-                        >
-                          News
-                        </Link>
-                      </li>
+                      {/*<li>*/}
+                      {/*  <Link*/}
+                      {/*    href="/"*/}
+                      {/*    aria-label="News"*/}
+                      {/*    title="News"*/}
+                      {/*    className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"*/}
+                      {/*  >*/}
+                      {/*    News*/}
+                      {/*  </Link>*/}
+                      {/*</li>*/}
                       <li>
                         <Link
                           href={sendToWhatsapp}

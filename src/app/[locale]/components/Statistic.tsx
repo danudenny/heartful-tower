@@ -22,14 +22,14 @@ export const Statistic = () => {
         <div className="text-center">
           <h6 className="text-4xl font-bold text-white">{t("japan")}</h6>
           <h6 className="mb-2 text-5xl font-black text-dark italic drop-shadow-lg">
-            Good
+            {t("good1")}
           </h6>
           <p className="text-gray-700 font-semibold">{t("quality")}</p>
         </div>
         <div className="text-center">
           <h6 className="text-4xl font-bold text-white">{t("the")}</h6>
           <h6 className="mb-2 text-5xl font-black text-dark italic drop-shadow-lg">
-            Good
+            {t("good2")}
           </h6>
           <p className="text-gray-700 font-semibold">{t("price")}</p>
         </div>

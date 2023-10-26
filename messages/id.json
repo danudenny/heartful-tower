@@ -1,6 +1,10 @@
 {
   "Nav": {
-    "get_promo": "Dapatkan Promo"
+    "get_promo": "Dapatkan Promo",
+    "home": "Home",
+    "about": "About",
+    "facilities": "Facilities",
+    "units": "Units"
   },
   "Hero": {
     "welcome": "Selamat datang di Heartful Tower Bekasi.",
@@ -13,9 +17,12 @@
     "p1": "Temukan denah lokasi Heartful Tower di Bekasi yang dirancang dengan cermat, menawarkan lingkungan hidup yang harmonis dengan fasilitas yang nyaman, ruang hijau, dan penataan bangunan yang strategis. Panduan Anda menuju komunitas yang dinamis di jantung kota Bekasi."
   },
   "About": {
-    "p1": "Perumnas IIDA Group didirikan di Indonesia sejak October 2017 yang  merupakan anak usaha dari IIDA SANGYO Co., Ltd. dan PT Propernas Griya Utama (anak perusahaan dari PERUM PERUMNAS).",
+    "title1": "Perumnas IIDA Group",
+    "p1": "Perumnas IIDA Group berdiri di Indonesia sejak Oktober 2017 yang merupakan anak usaha dari IIDA SANGYO Co., Ltd. PT Propernas Griya Utama (anak perusahaan dari PERUM PERUMNAS) ikut andil menanamkan modal pada Perumnas IIDA Group sebagai partner.",
     "p2": "IIDA SANGYO Co., Ltd. merupakan pengembang property ternama di bawah naungan IIDA Group Holdings yang merupakan Perusahaan Tbk di Jepang. IIDA Group telah menyediakan lebih dari 46.000 tempat tinggal pertahunnya, yang mana sekitar 30% penduduk Jepang memiilih tempat tinggal yang diproduksi oleh IIDA Group.",
-    "p3": "IIDA Groups menyediakan lebih dari 46.000 rumah setiap tahunnya. Artinya, sekitar 30% orang yang membeli rumah di Jepang, memilih rumah dari IIDA Group"
+    "p3": "IIDA Groups menyediakan lebih dari 46.000 rumah setiap tahunnya. Artinya, sekitar 30% orang yang membeli rumah di Jepang, memilih rumah dari IIDA Group",
+    "title2": "No.1 Share",
+    "next_project": "Next Project"
   },
   "Stat": {
     "provides": "Provides",
@@ -25,7 +32,9 @@
     "house": "Houses / Year",
     "location": "Location in Japan",
     "quality": "Quality",
-    "price": "Price"
+    "price": "Price",
+    "good1": "Good",
+    "good2": "Good"
   },
   "Facilities": {
     "title": "Keseimbangan Dalam Hidup Anda",
@@ -33,9 +42,18 @@
   },
   "Contact": {
     "title": "Ketahui Lebih Lanjut",
-    "desc": "Dapatkan penawaran terbaik dari kami melalui formulir dibawah ini."
+    "desc": "Dapatkan penawaran terbaik dari kami melalui formulir dibawah ini.",
+    "name": "Nama",
+    "email": "Email",
+    "phone": "No. Whatsapp",
+    "address": "Domisili",
+    "submit": "Kirim",
+    "loading": "Loading...",
+    "success": "Terima kasih telah menghubungi kami. Kami akan segera menghubungi anda."
   },
   "Units": {
-    "p1": "Di Heartful Tower, kami memahami bahwa setiap penghuni adalah unik. \nItulah mengapa kami menawarkan berbagai jenis unit untuk memenuhi gaya hidup dan preferensi yang berbeda. \nUnit manapun yang Anda pilih, Anda akan berada dalam sebuah komunitas yang mengedapankan kualitas, kenyamanan, dan kesenangan hidup perkotaan."
+    "title": "Unit Kami",
+    "p1": "Di Heartful Tower, kami memahami bahwa setiap penghuni adalah unik. \nItulah mengapa kami menawarkan berbagai jenis unit untuk memenuhi gaya hidup dan preferensi yang berbeda. \nUnit manapun yang Anda pilih, Anda akan berada dalam sebuah komunitas yang mengedapankan kualitas, kenyamanan, dan kesenangan hidup perkotaan.",
+    "typical_floor": "Typical Floor"
   }
 }

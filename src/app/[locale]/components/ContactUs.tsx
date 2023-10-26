@@ -32,7 +32,7 @@ export const ContactUs = () => {
       });
       if (res) {
         setIsLoading(false);
-        setSuccessMessage("Thank You for Contacting Us!");
+        setSuccessMessage(`${t("success")}`);
         if (inputDomiciliRef.current) {
           inputDomiciliRef.current.value = "";
         }
@@ -116,7 +116,7 @@ export const ContactUs = () => {
             <p className="leading-relaxed mb-5 text-gray-600">{t("desc")}</p>
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                Name
+                {t("name")}
               </label>
               <input
                 type="text"
@@ -133,7 +133,7 @@ export const ContactUs = () => {
                 htmlFor="email"
                 className="leading-7 text-sm text-gray-600"
               >
-                Email
+                {t("email")}
               </label>
               <input
                 type="email"
@@ -148,7 +148,7 @@ export const ContactUs = () => {
                 htmlFor="whatsapp"
                 className="leading-7 text-sm text-gray-600"
               >
-                No. Whatsapp
+                {t("phone")}
               </label>
               <input
                 type="text"
@@ -163,7 +163,7 @@ export const ContactUs = () => {
                 htmlFor="domicile"
                 className="leading-7 text-sm text-gray-600"
               >
-                Domisili
+                {t("address")}
               </label>
               <input
                 type="text"
@@ -182,7 +182,7 @@ export const ContactUs = () => {
                   isLoading ? "cursor-not-allowed" : ""
                 }`}
               >
-                {isLoading ? "Loading..." : "Submit"}
+                {isLoading ? `${t("loading")}` : `${t("submit")}`}
               </button>
               <div
                 className={`transition-opacity duration-300 ease-in-out ${

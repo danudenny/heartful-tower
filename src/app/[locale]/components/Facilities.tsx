@@ -15,7 +15,7 @@ export const Facilities = ({ reference }: IFacilitiesProps) => {
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
-    <section className="text-gray-600 body-font" ref={reference}>
+    <section className="text-gray-600 body-font bg-tower" ref={reference}>
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex w-full mb-20 flex-wrap items-center">
           <h1 className="sm:text-3xl text-2xl font-black title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">

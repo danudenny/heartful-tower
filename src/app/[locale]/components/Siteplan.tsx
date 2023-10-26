@@ -38,7 +38,7 @@ export const Siteplan = () => {
             data-aos-delay="50"
             data-aos-duration="1000"
           >
-            Heartful Tower Siteplan
+            Heartful Tower {t("siteplan")}
           </h1>
           <p
             className="max-w-2xl mb-6 font-light text-dark lg:mb-8 md:text-sm lg:text-lg dark:text-gray-400"

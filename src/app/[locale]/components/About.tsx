@@ -22,12 +22,12 @@ export const About = ({ reference }: AboutProps) => {
           <div className="grid gap-10 lg:grid-cols-2 items-center text-right">
             <div className="lg:pr-10">
               <h5
-                className="mb-4 text-4xl font-extrabold leading-none text-white"
+                className="mb-4 text-3xl font-extrabold leading-none text-white"
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="1000"
               >
-                Perumnas IIDA Group
+                {t("title1")}
               </h5>
               <p
                 className="mb-6 text-white text-lg"
@@ -64,7 +64,7 @@ export const About = ({ reference }: AboutProps) => {
                       showDesc ? "" : "hidden"
                     }`}
                   >
-                    Next Project
+                    {t("next_project")}
                   </p>
                 </div>
               )}
@@ -102,15 +102,7 @@ export const About = ({ reference }: AboutProps) => {
               />
             </div>
             <div className="lg:pr-10">
-              <h5
-                className="mb-4 text-4xl font-extrabold leading-none text-white underline-with-svg"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-center"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-              >
-                No.1 Share
-              </h5>
+              <h5>{t("title2")}</h5>
               <p
                 className="mb-6 text-white text-lg"
                 data-aos="fade-up"
