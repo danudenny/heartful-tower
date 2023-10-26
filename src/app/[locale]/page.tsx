@@ -19,6 +19,7 @@ export default function Home() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const faciltiesRef = useRef(null);
+  const contactUsRef = useRef(null);
   // const newsRef = useRef(null);
   const unitRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
@@ -46,6 +47,7 @@ export default function Home() {
         scrollToFacilities={() => scrollToSection(faciltiesRef)}
         // scrollToNews={() => scrollToSection(newsRef)}
         scrollToUnit={() => scrollToSection(unitRef)}
+        scrollToContactUs={() => scrollToSection(contactUsRef)}
       />
       <Hero reference={heroRef} />
       <Siteplan />
@@ -56,7 +58,7 @@ export default function Home() {
       {/*<Testimonial />*/}
       {/*<News reference={newsRef} />*/}
       {/*<OtherProject />*/}
-      {scrolled && <ContactUs />}
+      <ContactUs reference={contactUsRef} />
       <Footer />
       <BackToTopButton />
       <SocialMediaButton />

@@ -11,6 +11,7 @@ interface NavProps {
   scrollToFacilities: () => any;
   // scrollToNews: () => any;
   scrollToUnit: () => any;
+  scrollToContactUs: () => any;
 }
 
 export const Nav = ({
@@ -19,6 +20,7 @@ export const Nav = ({
   scrollToFacilities,
   // scrollToNews,
   scrollToUnit,
+  scrollToContactUs,
 }: NavProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isNavFixed, setIsNavFixed] = useState(false);
@@ -64,6 +66,15 @@ export const Nav = ({
   ) => {
     e.preventDefault();
     scrollToFacilities();
+    setActiveLink(section);
+  };
+
+  const handleScrollToContactUs = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    section: string | React.SetStateAction<string>,
+  ) => {
+    e.preventDefault();
+    scrollToContactUs();
     setActiveLink(section);
   };
 
@@ -216,17 +227,20 @@ export const Nav = ({
             </li>
             <li>
               <Link
-                href={sendToWhatsapp}
+                href="#"
+                onClick={(e) => handleScrollToContactUs(e, "contact")}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
-                target="_blank"
               >
                 {t("get_promo")}
               </Link>
             </li>
           </ul>
-          <div className="lg:hidden">
+
+          <div className="lg:hidden flex">
+            <LanguageSelector />
+
             <button
               aria-label="Open Menu"
               title="Open Menu"
@@ -259,24 +273,19 @@ export const Nav = ({
                         title="Company Mobile"
                         className="inline-flex items-center"
                       >
-                        <svg
-                          className="w-8 text-blue-400"
-                          viewBox="0 0 24 24"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeMiterlimit="10"
-                          stroke="currentColor"
-                          fill="none"
-                        >
-                          <rect x="3" y="1" width="7" height="12" />
-                          <rect x="3" y="17" width="7" height="6" />
-                          <rect x="14" y="1" width="7" height="6" />
-                          <rect x="14" y="11" width="7" height="12" />
-                        </svg>
-                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Company
-                        </span>
+                        <div className="flex items-center gap-3">
+                          <Image
+                            src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697274785/heartful-logo_kewplr_1_uzfx0i.png"
+                            alt="logo"
+                            width={400}
+                            height={150}
+                            priority={true}
+                            className="w-auto h-10 sm:h-10"
+                          />
+                          <h3 className="text-bold uppercase tracking-tighter text-sm sm:text-sm font-semibold text-dark sm:leading-none mt-1 mb-1 sm:mb-0 mr-2 sm:mr-0">
+                            Heartful Tower <br /> Bekasi
+                          </h3>
+                        </div>
                       </Link>
                     </div>
                     <div>
@@ -299,17 +308,19 @@ export const Nav = ({
                     <ul className="space-y-4">
                       <li>
                         <Link
-                          href="/"
+                          href="#"
+                          onClick={(e) => handleScrollToHero(e, "hero")}
+                          className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                           aria-label="Home"
                           title="Home"
-                          className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
                           {t("home")}
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/"
+                          href="#"
+                          onClick={(e) => handleScrollToAbout(e, "about")}
                           aria-label="About Us"
                           title="About Us"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
@@ -319,17 +330,21 @@ export const Nav = ({
                       </li>
                       <li>
                         <Link
-                          href="/"
+                          href="#"
+                          onClick={(e) =>
+                            handleScrollToFacilities(e, "facilities")
+                          }
                           aria-label="Facilities"
                           title="Facilities"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
                         >
-                          {t("facilties")}
+                          {t("facilities")}
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/"
+                          href="#"
+                          onClick={(e) => handleScrollToUnit(e, "unit")}
                           aria-label="Typical Floor"
                           title="Typical Floor"
                           className="font-medium tracking-wide text-dark transition-colors duration-200 hover:text-blue-400 border-b-2"
@@ -349,11 +364,11 @@ export const Nav = ({
                       {/*</li>*/}
                       <li>
                         <Link
-                          href={sendToWhatsapp}
+                          href="#"
+                          onClick={(e) => handleScrollToContactUs(e, "contact")}
                           className="inline-flex mt-3 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white bg-dark transition duration-200 shadow-mtext-[#73B153] hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
                           aria-label="Get Promo"
                           title="Get Promo"
-                          target="_blank"
                         >
                           {t("get_promo")}
                         </Link>
