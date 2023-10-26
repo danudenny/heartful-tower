@@ -10,7 +10,7 @@ export const Siteplan = () => {
 
   const siteplanImage = [
     {
-      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167105/heartful/siteplan_ioyqjo.png",
+      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1698311281/Group_1171274739_kmgiol.png",
     },
   ];
 
@@ -23,14 +23,10 @@ export const Siteplan = () => {
           data-aos-delay="50"
           data-aos-duration="1000"
         >
-          <div className="absolute text-success font-black uppercase jusify-center bottom-10 left-20">
-            <p className="text-2xl">Greenery Area</p>
-            <p className="text-5xl">30%</p>
-          </div>
           <CldImage
             width="900"
             height="600"
-            src="v1697167105/heartful/siteplan_ioyqjo.png"
+            src="v1698311281/Group_1171274739_kmgiol.png"
             alt=""
             onClick={() => setOpen(true)}
           />

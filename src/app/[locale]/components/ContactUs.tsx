@@ -88,17 +88,16 @@ export const ContactUs = () => {
               <p className="mt-1">
                 Revo Mall
                 <br />
-                Ruko No. 55, Lt. UG Kios No 178 - 179
-                <br />
-                Jl. Ahmad Yani No.Kav. 1, RT.005/RW.002, Pekayon Jaya, Kec.
-                Bekasi Sel., Kota Bks, Jawa Barat
+                Ruko No. 55, Lt. UG Kios No 35 - 36
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 Whatsapp
               </h2>
-              <a className="text-indigo-500 leading-relaxed">0811 1993 3099</a>
+              <span className="text-indigo-500 leading-relaxed">
+                0811 1993 3099
+              </span>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE
               </h2>

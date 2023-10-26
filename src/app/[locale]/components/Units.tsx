@@ -22,10 +22,10 @@ export const Units = ({ reference }: UnitsProps) => {
 
   const typicalFloorImages = [
     {
-      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697484713/TYPICAL_FLOOR_PLAN_TOWER_1_A_1_qa3gvm.jpg",
+      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1698310443/Group_1171274738_t6aoo5.png",
     },
     {
-      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167105/heartful/siteplan_ioyqjo.png",
+      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1698311281/Group_1171274739_kmgiol.png",
     },
   ];
 

@@ -165,6 +165,19 @@
     height: 65%;
 }
 
+/*.mobile small */
+@media (max-width: 500px) {
+    .emba__button {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .embla__button__svg {
+        width: 40%;
+        height: 40%;
+    }
+}
+
 .embla__dot {
     -webkit-appearance: none;
     background-color: transparent;

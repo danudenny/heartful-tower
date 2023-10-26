@@ -91,7 +91,7 @@ export const Nav = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out mx-auto z-40 lg:rounded-lg items-center ${
+      className={`fixed top-0 left-0 w-full transition-all duration-500 ease-in-out mx-auto z-40 items-center ${
         isNavFixed ? "bg-white" : "bg-transparent"
       }`}
     >
@@ -140,7 +140,7 @@ export const Nav = ({
                 onClick={(e) => handleScrollToHero(e, "hero")}
                 className={`font-bold tracking-wide ${
                   activeLink === "hero"
-                    ? "text-white bg-dark rounded-full py-2 px-3"
+                    ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
                 } transition-colors duration-200 hover:text-white`}
                 aria-label="Home"
@@ -154,7 +154,7 @@ export const Nav = ({
                 onClick={(e) => handleScrollToAbout(e, "about")}
                 className={`font-bold tracking-wide ${
                   activeLink === "about"
-                    ? "text-white bg-dark rounded-full py-2 px-3"
+                    ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
                 } transition-colors duration-200 hover:text-white`}
                 href="/"
@@ -172,7 +172,7 @@ export const Nav = ({
                 onClick={(e) => handleScrollToFacilities(e, "facilities")}
                 className={`font-bold tracking-wide ${
                   activeLink === "facilities"
-                    ? "text-white bg-dark rounded-full py-2 px-3"
+                    ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
                 } transition-colors duration-200 hover:text-white`}
               >
@@ -187,7 +187,7 @@ export const Nav = ({
                 onClick={(e) => handleScrollToUnit(e, "unit")}
                 className={`font-bold tracking-wide ${
                   activeLink === "unit"
-                    ? "text-white bg-dark rounded-full py-2 px-3"
+                    ? "text-white bg-dark py-2 px-3"
                     : "text-dark"
                 } transition-colors duration-200 hover:text-white`}
               >
@@ -202,7 +202,7 @@ export const Nav = ({
             {/*    onClick={(e) => handleScrollToNews(e, "news")}*/}
             {/*    className={`font-bold tracking-wide ${*/}
             {/*      activeLink === "news"*/}
-            {/*        ? "text-white bg-dark rounded-full py-2 px-3"*/}
+            {/*        ? "text-white bg-dark py-2 px-3"*/}
             {/*        : "text-dark"*/}
             {/*    } transition-colors duration-200 hover:text-white`}*/}
             {/*  >*/}
@@ -217,7 +217,7 @@ export const Nav = ({
             <li>
               <Link
                 href={sendToWhatsapp}
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-dark hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
                 aria-label="Sign up"
                 title="Sign up"
                 target="_blank"
@@ -350,7 +350,7 @@ export const Nav = ({
                       <li>
                         <Link
                           href={sendToWhatsapp}
-                          className="inline-flex mt-3 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white bg-dark transition duration-200 rounded-full shadow-mtext-[#73B153] hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
+                          className="inline-flex mt-3 items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white bg-dark transition duration-200 shadow-mtext-[#73B153] hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
                           aria-label="Get Promo"
                           title="Get Promo"
                           target="_blank"

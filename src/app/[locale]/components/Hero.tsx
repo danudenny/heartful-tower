@@ -69,7 +69,7 @@ export const Hero = ({ reference }: HeroProps) => {
               <a
                 href={sendToWhatsapp}
                 target="_blank"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-dark hover:bg-success-alt focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-success-alt focus:shadow-outline focus:outline-none"
               >
                 {t("get_information")}
               </a>

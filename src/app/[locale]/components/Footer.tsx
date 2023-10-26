@@ -99,7 +99,7 @@ export const Footer = () => {
                 <p className="mt-1">
                   Revo Mall
                   <br />
-                  Ruko No. 55, Lt. UG Kios No 178 - 179
+                  Ruko No. 55, Lt. UG Kios No 35 - 36
                 </p>
               </a>
             </div>
