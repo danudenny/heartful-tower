@@ -21,7 +21,6 @@ export default function Home() {
   const faciltiesRef = useRef(null);
   // const newsRef = useRef(null);
   const unitRef = useRef(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const scrollToSection = (ref: any) => {
@@ -29,20 +28,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsModalOpen(true);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
     AOS.init();
   }, []);
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -52,7 +39,7 @@ export default function Home() {
 
   return (
     <main>
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
+      <Modal />
       <Nav
         scrollToHero={() => scrollToSection(heroRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}

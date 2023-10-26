@@ -165,6 +165,14 @@
     height: 65%;
 }
 
+.hero__modal .yarl__navigation_prev {
+    display: none !important;
+}
+
+.hero__modal .yarl__navigation_next {
+    display: none !important;
+}
+
 /*.mobile small */
 @media (max-width: 500px) {
     .emba__button {
