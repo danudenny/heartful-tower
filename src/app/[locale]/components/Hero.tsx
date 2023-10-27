@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { useParams } from "next/navigation";
+import { FaCircleInfo } from "react-icons/fa6";
 
 interface HeroProps {
   reference: React.MutableRefObject<null>;
@@ -24,7 +25,7 @@ export const Hero = ({ reference }: HeroProps) => {
   return (
     <AnimatePresence>
       <div
-        className="relative flex flex-col-reverse pt-10 lg:pt-16 lg:flex-col lg:pb-0 h-screen bg-hero"
+        className="relative flex flex-col pt-10 lg:pt-16 lg:flex-col lg:pb-0 h-screen"
         ref={reference}
       >
         <CldImage
@@ -32,10 +33,10 @@ export const Hero = ({ reference }: HeroProps) => {
           src="v1697788758/bird_eye_stand_landscape_1_2_ybacti.jpg"
           width={1920}
           height={1024}
-          className="absolute inset-0 object-cover w-full h-full"
+          className="absolute inset-0 object-cover w-full h-full opacity-80 sm:opacity-100"
         />
         <motion.div
-          className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl"
+          className="relative flex flex-col w-full max-w-xl px-4 pt-64 sm:pt-0 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl text-white"
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
@@ -46,7 +47,7 @@ export const Hero = ({ reference }: HeroProps) => {
           }}
         >
           <div className="mb-16 lg:my-40 lg:max-w-full lg:pr-5">
-            <h2 className="mb-5 font-black text-4xl tracking-tight text-dark sm:text-8xl sm:leading-none">
+            <h2 className="mb-5 font-black text-4xl tracking-tight text-dark sm:text-8xl sm:leading-none shadow-white drop-shadow-xl">
               The Desire
               <br />
               To<span className="text-danger-dark italic">Thrive</span>
@@ -77,7 +78,8 @@ export const Hero = ({ reference }: HeroProps) => {
                 target="_blank"
                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-success-alt focus:shadow-outline focus:outline-none"
               >
-                {t("get_information")}
+                {t("get_information")}{" "}
+                <FaCircleInfo className="ml-2" size={20} />
               </a>
             </div>
           </div>

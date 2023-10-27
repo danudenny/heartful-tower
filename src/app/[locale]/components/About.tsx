@@ -102,7 +102,9 @@ export const About = ({ reference }: AboutProps) => {
               />
             </div>
             <div className="lg:pr-10">
-              <h5>{t("title2")}</h5>
+              <h5 className="font-black text-white text-4xl mb-2">
+                {t("title2")}
+              </h5>
               <p
                 className="mb-6 text-white text-lg"
                 data-aos="fade-up"

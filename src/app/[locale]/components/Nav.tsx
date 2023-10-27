@@ -4,6 +4,7 @@ import Image from "next/image";
 import { LanguageSelector } from "@/app/[locale]/components/LanguageSelector";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { MdOutlineCrisisAlert } from "react-icons/md";
 
 interface NavProps {
   scrollToHero: () => any;
@@ -233,6 +234,7 @@ export const Nav = ({
                 aria-label="Sign up"
                 title="Sign up"
               >
+                <MdOutlineCrisisAlert className="mr-2" />
                 {t("get_promo")}
               </Link>
             </li>

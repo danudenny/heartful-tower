@@ -15,6 +15,10 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
   const [successMessage, setSuccessMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const downloadBrochure = async () => {
+    // create a download filepdf
+  };
+
   const subscribeUser = async (e: { preventDefault: () => void }) => {
     setIsLoading(true);
     e.preventDefault();
