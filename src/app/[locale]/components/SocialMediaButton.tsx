@@ -35,6 +35,10 @@ const SocialMediaButton: React.FC = () => {
     };
   }, []);
 
+  const sendToWhatsapp = `https://wa.me/+6281119933099?text=${encodeURIComponent(
+    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
+  )}`;
+
   return (
     <div
       className={`fixed bottom-4 left-4 flex-col gap-2 ${
@@ -43,10 +47,11 @@ const SocialMediaButton: React.FC = () => {
       ref={socialMediaButtonRef}
     >
       <a
-        href="https://whatsapp.com"
+        href={sendToWhatsapp}
         className={`p-3 bg-green-500 text-white flex mb-3 gap-3 items-center ${
           isMobile ? "rounded-full" : "rounded-lg"
         }`}
+        target="_blank"
       >
         <FaWhatsapp size={24} />
         Chat Us
@@ -63,28 +68,31 @@ const SocialMediaButton: React.FC = () => {
             Facebook
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://www.tiktok.com/@heartfultower"
             className={`p-3 bg-dark text-white flex gap-3 items-center ${
               isMobile ? "rounded-full" : "rounded-lg"
             }`}
+            target="_blank"
           >
             <FaTiktok size={24} />
             Tiktok
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/heartfultowerbekasi/"
             className={`p-3 bg-[#833AB4] text-white flex gap-3 items-center ${
               isMobile ? "rounded-full" : "rounded-lg"
             }`}
+            target="_blank"
           >
             <FaInstagram size={24} />
             Instagram
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/heartful-tower"
             className={`p-3 bg-blue-800 text-white flex gap-3 items-center ${
               isMobile ? "rounded-full" : "rounded-lg"
             }`}
+            target="_blank"
           >
             <FaLinkedin size={24} />
             LinkedIn
