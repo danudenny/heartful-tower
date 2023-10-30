@@ -19,7 +19,7 @@ export const About = ({ reference }: AboutProps) => {
     <>
       <div className="bg-hero" ref={reference}>
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-2 items-center text-right">
+          <div className="grid gap-10 lg:grid-cols-2 items-center sm:text-right text-left">
             <div className="lg:pr-10">
               <h5
                 className="mb-4 text-3xl font-extrabold leading-none text-white"
@@ -43,7 +43,7 @@ export const About = ({ reference }: AboutProps) => {
             </div>
             <div>
               <CldImage
-                src="v1697712378/Group_1171274735_xzx2ux.png"
+                src="v1698670841/about-img_1_hc4ziv.png"
                 alt="about image"
                 width={600}
                 height={600}

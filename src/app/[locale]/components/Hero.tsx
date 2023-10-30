@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { useParams } from "next/navigation";
 import { FaCircleInfo } from "react-icons/fa6";
+import { useMediaQuery } from "@react-hook/media-query";
 
 interface HeroProps {
   reference: React.MutableRefObject<null>;
@@ -22,19 +23,34 @@ export const Hero = ({ reference }: HeroProps) => {
   const { locale } = params;
   const isJp = locale === "jp";
 
+  const isMobile = useMediaQuery("only screen and (max-width: 500px)");
+
   return (
     <AnimatePresence>
       <div
         className="relative flex flex-col pt-10 lg:pt-16 lg:flex-col lg:pb-0 h-screen"
         ref={reference}
       >
-        <CldImage
-          alt="bg hero"
-          src="v1697788758/bird_eye_stand_landscape_1_2_ybacti.jpg"
-          width={1920}
-          height={1024}
-          className="absolute inset-0 object-cover w-full h-full opacity-80 sm:opacity-100"
-        />
+        {isMobile ? (
+          <CldImage
+            alt="bg hero"
+            src="v1698671047/IMG_5955_iftlae.jpg"
+            width={1920}
+            height={1024}
+            priority={true}
+            className="absolute inset-0 object-cover w-full h-full opacity-70"
+          />
+        ) : (
+          <CldImage
+            alt="bg hero"
+            src="v1697788758/bird_eye_stand_landscape_1_2_ybacti.jpg"
+            width={1920}
+            height={1024}
+            priority={true}
+            className="absolute inset-0 object-cover w-full h-full"
+          />
+        )}
+
         <motion.div
           className="relative flex flex-col w-full max-w-xl px-4 pt-64 sm:pt-0 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl text-white"
           initial={{ x: 300, opacity: 0 }}

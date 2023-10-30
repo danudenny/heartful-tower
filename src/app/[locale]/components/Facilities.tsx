@@ -18,10 +18,10 @@ export const Facilities = ({ reference }: IFacilitiesProps) => {
     <section className="text-gray-600 body-font bg-tower" ref={reference}>
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex w-full mb-20 flex-wrap items-center">
-          <h1 className="sm:text-3xl text-2xl font-black title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
+          <h1 className="sm:text-3xl text-2xl font-black title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4 text-center sm:text-start">
             {t("title")}
           </h1>
-          <p className="lg:w-1/3 mx-auto leading-relaxed text-base mr-0 text-end">
+          <p className="lg:w-1/3 mx-auto leading-relaxed text-base mr-0 text-center sm:text-end">
             {t("desc")}
           </p>
         </div>
