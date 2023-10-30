@@ -14,6 +14,7 @@ import SocialMediaButton from "@/app/[locale]/components/SocialMediaButton";
 import Modal from "@/app/[locale]/components/Modal";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Script from "next/script";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -40,6 +41,18 @@ export default function Home() {
 
   return (
     <main>
+      <div className="container">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-1WDBSH37S7" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-1WDBSH37S7');
+        `}
+        </Script>
+      </div>
       <Modal />
       <Nav
         scrollToHero={() => scrollToSection(heroRef)}

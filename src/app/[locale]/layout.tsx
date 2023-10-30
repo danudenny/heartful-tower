@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "Selamat datang di Heartful Tower Bekasi,\n" +
     "Apartemen dengan harga terbaik.\n" +
     "Oleh Developer Jepang",
+  keywords: ["apartemen", "bekasi", "heartful", "tower", "jepang"],
 };
 
 // @ts-ignore
