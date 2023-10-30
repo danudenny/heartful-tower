@@ -2,7 +2,6 @@ import { Statistic } from "@/app/[locale]/components/Statistic";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { CldImage } from "next-cloudinary";
-import { BiPlusCircle } from "react-icons/bi";
 import { useMediaQuery } from "@react-hook/media-query";
 
 interface AboutProps {
@@ -47,27 +46,12 @@ export const About = ({ reference }: AboutProps) => {
                 alt="about image"
                 width={600}
                 height={600}
-                priority={true}
+                priority={false}
+                quality={80}
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="1000"
               />
-              {!isMobile && (
-                <div className="absolute -mt-96 ml-96">
-                  <BiPlusCircle
-                    className="text-white cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out"
-                    size={32}
-                    onClick={() => setShowDesc(!showDesc)}
-                  />
-                  <p
-                    className={`text-dark bg-tower px-2 py-1 font-bold rounded-md mt-2 cursor-pointer hover:scale-110 transition-all duration-500 ease-in-out ${
-                      showDesc ? "" : "hidden"
-                    }`}
-                  >
-                    {t("next_project")}
-                  </p>
-                </div>
-              )}
             </div>
           </div>
         </div>
