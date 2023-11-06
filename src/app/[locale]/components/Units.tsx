@@ -131,7 +131,7 @@ export const Units = ({ reference }: UnitsProps) => {
                         onClick={() =>
                           openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167094/heartful/unit/studio_j5ksb6.jpg",
-                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216861/Unit-Studio-A-21_qrolie.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/Studio_fx1mlp.png",
                           ])
                         }
                       />
@@ -142,11 +142,11 @@ export const Units = ({ reference }: UnitsProps) => {
                         width={200}
                         height={200}
                         className="object-contain w-full rounded-lg h-52 sm:h-96 cursor-pointer"
-                        src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216861/Unit-Studio-A-21_qrolie.png"
+                        src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/Studio_fx1mlp.png"
                         alt=""
                         onClick={() =>
                           openLightbox([
-                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216861/Unit-Studio-A-21_qrolie.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/Studio_fx1mlp.png",
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167094/heartful/unit/studio_j5ksb6.jpg",
                           ])
                         }
@@ -169,7 +169,7 @@ export const Units = ({ reference }: UnitsProps) => {
                         onClick={() =>
                           openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/1br_jjf5mx.jpg",
-                            "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-1-BR-A_nectvc.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/1_Bedroom_dyeigh.png",
                           ])
                         }
                       />
@@ -180,11 +180,11 @@ export const Units = ({ reference }: UnitsProps) => {
                         width={200}
                         height={200}
                         className="object-contain w-full rounded-lg h-52 sm:h-96 cursor-pointer"
-                        src="https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-1-BR-A_nectvc.png"
+                        src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/1_Bedroom_dyeigh.png"
                         alt=""
                         onClick={() =>
                           openLightbox([
-                            "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-1-BR-A_nectvc.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/1_Bedroom_dyeigh.png",
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/1br_jjf5mx.jpg",
                           ])
                         }
@@ -207,7 +207,7 @@ export const Units = ({ reference }: UnitsProps) => {
                         onClick={() =>
                           openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/2br_bdqnbv.jpg",
-                            "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-2-BR-A-Nett37_ivezfr.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/2_Bedroom_aalzsm.png",
                           ])
                         }
                       />
@@ -218,11 +218,11 @@ export const Units = ({ reference }: UnitsProps) => {
                         width={200}
                         height={200}
                         className="object-contain w-full rounded-lg h-52 sm:h-96 cursor-pointer"
-                        src="https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-2-BR-A-Nett37_ivezfr.png"
+                        src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/2_Bedroom_aalzsm.png"
                         alt=""
                         onClick={() =>
                           openLightbox([
-                            "https://res.cloudinary.com/killtdj/image/upload/v1697216861/Unit-2-BR-A-Nett37_ivezfr.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260187/2_Bedroom_aalzsm.png",
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/2br_bdqnbv.jpg",
                           ])
                         }
@@ -245,7 +245,7 @@ export const Units = ({ reference }: UnitsProps) => {
                         onClick={() =>
                           openLightbox([
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/3br_wts5o6.jpg",
-                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216862/Unit-3-BR_fjrz75.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260188/3_Bedroom_isrywl.png",
                           ])
                         }
                       />
@@ -256,11 +256,11 @@ export const Units = ({ reference }: UnitsProps) => {
                         width={200}
                         height={200}
                         className="object-contain w-full rounded-lg h-52 sm:h-96 cursor-pointer"
-                        src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216862/Unit-3-BR_fjrz75.png"
+                        src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260188/3_Bedroom_isrywl.png"
                         alt=""
                         onClick={() =>
                           openLightbox([
-                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697216862/Unit-3-BR_fjrz75.png",
+                            "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1699260188/3_Bedroom_isrywl.png",
                             "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167092/heartful/unit/3br_wts5o6.jpg",
                           ])
                         }
