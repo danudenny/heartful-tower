@@ -50,6 +50,7 @@ const Modal = () => {
           pinchZoomDistanceFactor,
           scrollToZoom,
         }}
+        controller={{closeOnBackdropClick: true}}
       />
     </>
   );

@@ -110,26 +110,30 @@ export const Footer = () => {
             </span>
             <div className="flex items-center mt-1 space-x-3">
               <a
-                href="/"
+                href="https://facebook.com"
                 className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
+                target="_blank"
               >
                 <FaFacebook />
               </a>
               <a
-                href="/"
+                href="https://www.instagram.com/heartfultowerbekasi/"
                 className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
+                target="_blank"
               >
                 <FaInstagram />
               </a>
               <a
-                href="/"
+                href="https://www.tiktok.com/@heartfultower"
                 className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
+                target="_blank"
               >
                 <FaTiktok />
               </a>
               <a
-                href="/"
+                href="https://www.linkedin.com/in/heartful-tower"
                 className="text-[#333] transition-colors duration-300 hover:text-deep-purple-accent-400"
+                target="_blank"
               >
                 <FaLinkedin />
               </a>
