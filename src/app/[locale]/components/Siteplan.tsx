@@ -33,12 +33,12 @@ export const Siteplan = () => {
         </div>
         <div className="mr-auto place-self-center lg:col-span-7 bg-gray-200 rounded-lg p-12 drop-shadow-2xl shadow-gray-700">
           <h1
-            className="max-w-2xl mb-4 text-4xl text-dark font-black uppercase tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+            className="max-w-2xl mb-4 text-3xl text-dark font-black uppercase tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white"
             data-aos="zoom-in-up"
             data-aos-delay="50"
             data-aos-duration="1000"
           >
-            Heartful Tower {t("siteplan")}
+            Heartful Tower<br /> {t("siteplan")}
           </h1>
           <p
             className="max-w-2xl mb-6 font-light text-dark lg:mb-8 md:text-sm lg:text-lg dark:text-gray-400"

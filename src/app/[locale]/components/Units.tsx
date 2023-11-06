@@ -25,7 +25,7 @@ export const Units = ({ reference }: UnitsProps) => {
       src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1698310443/Group_1171274738_t6aoo5.png",
     },
     {
-      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1698311281/Group_1171274739_kmgiol.png",
+      src: "https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1698403617/siteplan_l0bv9g.png",
     },
   ];
 

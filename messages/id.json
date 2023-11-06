@@ -49,7 +49,9 @@
     "address": "Domisili",
     "submit": "Kirim",
     "loading": "Loading...",
-    "success": "Terima kasih telah menghubungi kami. Kami akan segera menghubungi anda."
+    "success": "Terima kasih telah menghubungi kami. Kami akan segera menghubungi anda.",
+    "error": "Mohon isi semua kolom.",
+    "payment_information": "Pembayaran hanya dapat dilakukan melalui transfer ke rekening PT. Perumnas IIDA Group, kami tidak menerima pembayaran tunai dan apabila transfer diluar dari rekening PT. Perumnas IIDA Group perusahaan tidak bertanggung jawab"
   },
   "Units": {
     "title": "Unit Kami",

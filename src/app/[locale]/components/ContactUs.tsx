@@ -1,3 +1,4 @@
+import { useMediaQueries } from "@react-hook/media-query";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -13,6 +14,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
   const inputNameRef = useRef<HTMLInputElement>(null);
 
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessages, setErrorMessages] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const downloadBrochure = async () => {
@@ -22,6 +24,17 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
   const subscribeUser = async (e: { preventDefault: () => void }) => {
     setIsLoading(true);
     e.preventDefault();
+
+    if (
+      !inputEmailRef.current?.value ||
+      !inputNameRef.current?.value ||
+      !inputWhatsappRef.current?.value ||
+      !inputDomiciliRef.current?.value
+    ) {
+      setIsLoading(false);
+      setErrorMessages([t("error")]);
+      return;
+    }
 
     try {
       const res = await fetch("/api/contact", {
@@ -57,7 +70,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
     } catch (error) {
       console.error(error);
       setIsLoading(false);
-      setSuccessMessage("");
+      setErrorMessages(["Something went wrong, please try again"]);
     }
   };
 
@@ -73,6 +86,16 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
     }
   }, [successMessage]);
 
+  useEffect(() => {
+    if (errorMessages.length > 0) {
+      const timeout = setTimeout(() => {
+        setErrorMessages([]);
+      }, 2000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [errorMessages]);
+
   return (
     <section className="text-gray-600 body-font relative" ref={reference}>
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -87,7 +110,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
             title="herattower-location"
           ></iframe>
 
-          <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <div className="bg-white sm:relative sm:flex-wrap py-6 rounded shadow-md w-full flex">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 Marketing Gallery & Show Unit <br />
@@ -103,7 +126,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 Whatsapp
               </h2>
-              <span className="text-indigo-500 leading-relaxed">
+              <span className="leading-relaxed">
                 0811 1993 3099
               </span>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
@@ -192,16 +215,33 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
               >
                 {isLoading ? `${t("loading")}` : `${t("submit")}`}
               </button>
-              <div
-                className={`transition-opacity duration-300 ease-in-out ${
-                  successMessage ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                {successMessage}
-              </div>
+              {errorMessages.length > 0 ? (
+                <div
+                  className={`transition-opacity duration-300 ease-in-out ${
+                    errorMessages.length > 0 ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  {errorMessages.map((message) => (
+                    <p key={message} className="text-danger">
+                      {message}
+                    </p>
+                  ))}
+                </div>
+                ) : <div
+                  className={`transition-opacity duration-300 ease-in-out ${
+                    successMessage ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  {successMessage}
+                </div>
+              }
             </div>
+            
           </div>
         </form>
+      </div>
+      <div className="w-2/3 items-center text-center mx-auto mb-5 italic font-semibold text-danger underline text-sm">
+        <p>* {t('payment_information')}</p>
       </div>
     </section>
   );
