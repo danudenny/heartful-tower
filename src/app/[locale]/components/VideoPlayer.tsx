@@ -5,7 +5,7 @@ export const VideoPlayer = () => {
   return (
     <div className="video-player">
       <CldVideoPlayer
-        src="v1697167098/heartful/video/video_nwuoyq.mp4"
+        src="v1699365047/Heartful_Tower_-_Teaser_-_November_wt6gka.mp4"
         loop
         muted
         className="w-full h-full object-cover"

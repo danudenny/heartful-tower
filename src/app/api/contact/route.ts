@@ -9,11 +9,11 @@ export async function POST(request: NextRequest) {
   const { email, name, domicili, whatsapp } = await request.json();
 
   const transport = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
-    port: 2525,
+    host: "smtp.gmail.com",
+    port: 465,
     auth: {
-      user: "5d0f97470f807d",
-      pass: "19efe05579f80e",
+      user: "erry@perumnas-iidagroup.com",
+      pass: "Erry11IIDAGroup",
     },
   });
 
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: email,
-    to: "heartful-tower@mail.com",
+    to: "erry@perumnas-iidagroup.com",
     subject: `Contact Submission - Heartful Tower Bekasi Apartment Brochure Request`,
     html: htmlToSend,
   };

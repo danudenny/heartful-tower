@@ -25,7 +25,7 @@ const Modal = () => {
 
   const modalImage = [
     {
-      src: "https://res.cloudinary.com/killtdj/image/upload/c_limit,w_600/f_auto/q_80/v1698314968/popup_banner_g4dmu4.png?_a=BAVAnIIB0",
+      src: "https://res.cloudinary.com/killtdj/image/upload/c_limit,w_600/f_auto/q_80/v1699364871/WhatsApp_Image_2023-11-07_at_1.15.21_PM_shjxzg.jpg",
       alt: "banner",
     },
   ];

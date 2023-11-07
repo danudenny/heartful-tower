@@ -1,6 +1,6 @@
 {
   "Nav": {
-    "get_promo": "キャンペーン情報",
+    "get_promo": "資料請求",
     "home": "トップ",
     "about": "会社案内",
     "facilities": "設備",
@@ -10,7 +10,7 @@
     "welcome": "HEARTFUL TOWER BEKASIへようこそ。",
     "best_prices": "日本デベロッパーが開発する",
     "japan_developer": "お値打ちアパートメント！",
-    "get_information": "資料請求"
+    "get_information": "キャンペーン情報"
   },
   "Siteplan": {
     "siteplan": "サイトプラン",
@@ -51,7 +51,7 @@
     "loading": "読み込み中...",
     "success": "送信しました！",
     "error": "すべてのフィールドを記入してください。",
-    "payment_information": "支払いはPT. Perumnas IIDA Groupの口座への振込のみ可能です。現金支払いは受け付けておらず、PT. Perumnas IIDA Groupの口座以外からの振込の場合、会社は責任を負いません。"
+    "payment_information": "お支払いはPT Perumnas IIDA Groupの口座へのお振込みのみとなります。現金でのお支払いは受け付けておりません。尚、当社は現金支払い又はPT Perumnas IIDA Groupの口座以外への振込みに対し、責任を負いかねますのでご了承ください。"
   },
   "Units": {
     "title": "間取り",
