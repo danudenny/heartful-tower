@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
     host: "smtp.gmail.com",
     port: 465,
     auth: {
-      user: "denny.danuwijaya@gmail.com",
-      pass: "xuyakgkuzwrojfop",
+      user: "fiona@perumnas-iidagroup.com",
+      pass: "etgkjhnfxkxunoja",
     },
   });
 
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: email,
-    to: "erry@perumnas-iidagroup.com",
+    to: "fiona@perumnas-iidagroup.com",
     subject: `Contact Submission - Heartful Tower Bekasi Apartment Brochure Request`,
     html: htmlToSend,
   };
