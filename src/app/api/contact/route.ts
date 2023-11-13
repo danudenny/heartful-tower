@@ -1,8 +1,8 @@
-import { type NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import Mail from "nodemailer/lib/mailer";
 import { readFileSync } from "fs";
 import * as handlebars from "handlebars";
+import { NextResponse, type NextRequest } from "next/server";
+import nodemailer from "nodemailer";
+import Mail from "nodemailer/lib/mailer";
 import { join } from "path";
 
 export async function POST(request: NextRequest) {
@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
     host: "smtp.gmail.com",
     port: 465,
     auth: {
-      user: "erry@perumnas-iidagroup.com",
-      pass: "Erry11IIDAGroup",
+      user: "denny.danuwijaya@gmail.com",
+      pass: "xuyakgkuzwrojfop",
     },
   });
 
