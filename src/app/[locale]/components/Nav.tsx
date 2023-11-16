@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { LanguageSelector } from "@/app/[locale]/components/LanguageSelector";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { MdOutlineCrisisAlert } from "react-icons/md";
 
 interface NavProps {
@@ -206,21 +206,6 @@ export const Nav = ({
                 {t("units")}
               </Link>
             </li>
-            {/*<li>*/}
-            {/*  <Link*/}
-            {/*    href="/"*/}
-            {/*    aria-label="News"*/}
-            {/*    title="News"*/}
-            {/*    onClick={(e) => handleScrollToNews(e, "news")}*/}
-            {/*    className={`font-bold tracking-wide ${*/}
-            {/*      activeLink === "news"*/}
-            {/*        ? "text-white bg-dark py-2 px-3"*/}
-            {/*        : "text-dark"*/}
-            {/*    } transition-colors duration-200 hover:text-white`}*/}
-            {/*  >*/}
-            {/*    News*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
           </ul>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
@@ -228,11 +213,11 @@ export const Nav = ({
             </li>
             <li>
               <Link
-                href="#"
-                onClick={(e) => handleScrollToContactUs(e, "contact")}
+                href="#contact-us"
+                // onClick={(e) => handleScrollToContactUs(e, "contact")}
                 className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-[#73B153] focus:shadow-outline focus:outline-none"
-                aria-label="Sign up"
-                title="Sign up"
+                aria-label={t("get_promo")}
+                title={t("get_promo")}
               >
                 <MdOutlineCrisisAlert className="mr-2" />
                 {t("get_promo")}

@@ -1,4 +1,3 @@
-import { useMediaQueries } from "@react-hook/media-query";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -97,7 +96,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
   }, [errorMessages]);
 
   return (
-    <section className="text-gray-600 body-font relative" ref={reference}>
+    <section className="text-gray-600 body-font relative" ref={reference} id="contact-us">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -153,9 +152,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
                 type="text"
                 id="name"
                 name="name"
-                autoCapitalize="off"
                 ref={inputNameRef}
-                autoCorrect="off"
                 className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>

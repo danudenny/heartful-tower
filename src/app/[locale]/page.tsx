@@ -1,28 +1,28 @@
 "use client";
-import { Hero } from "@/app/[locale]/components/Hero";
-import { Siteplan } from "@/app/[locale]/components/Siteplan";
 import { About } from "@/app/[locale]/components/About";
-import { Facilities } from "@/app/[locale]/components/Facilities";
-import { ContactUs } from "@/app/[locale]/components/ContactUs";
-import { Footer } from "@/app/[locale]/components/Footer";
-import { Units } from "@/app/[locale]/components/Units";
-import { Nav } from "@/app/[locale]/components/Nav";
-import { useEffect, useRef, useState } from "react";
-import { VideoPlayer } from "@/app/[locale]/components/VideoPlayer";
 import { BackToTopButton } from "@/app/[locale]/components/BackToTopButton";
+import { ContactUs } from "@/app/[locale]/components/ContactUs";
+import { Facilities } from "@/app/[locale]/components/Facilities";
+import { Footer } from "@/app/[locale]/components/Footer";
+import { Hero } from "@/app/[locale]/components/Hero";
+import { Nav } from "@/app/[locale]/components/Nav";
+import { Siteplan } from "@/app/[locale]/components/Siteplan";
 import SocialMediaButton from "@/app/[locale]/components/SocialMediaButton";
-import Modal from "@/app/[locale]/components/Modal";
-import "aos/dist/aos.css";
+import { Units } from "@/app/[locale]/components/Units";
+import { VideoPlayer } from "@/app/[locale]/components/VideoPlayer";
 import AOS from "aos";
+import "aos/dist/aos.css";
 import Script from "next/script";
+import { useEffect, useRef, useState } from "react";
+import Modal from "./components/Modal";
 
 export default function Home() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const faciltiesRef = useRef(null);
-  const contactUsRef = useRef(null);
   // const newsRef = useRef(null);
   const unitRef = useRef(null);
+  const contactUsRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
 
   const scrollToSection = (ref: any) => {
@@ -34,10 +34,16 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrolled(window.scrollY > 2000);
-    });
-  });
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 500);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <main>
@@ -58,7 +64,6 @@ export default function Home() {
         scrollToHero={() => scrollToSection(heroRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}
         scrollToFacilities={() => scrollToSection(faciltiesRef)}
-        // scrollToNews={() => scrollToSection(newsRef)}
         scrollToUnit={() => scrollToSection(unitRef)}
         scrollToContactUs={() => scrollToSection(contactUsRef)}
       />
@@ -68,9 +73,6 @@ export default function Home() {
       <Facilities reference={faciltiesRef} />
       {scrolled && <VideoPlayer />}
       <Units reference={unitRef} />
-      {/*<Testimonial />*/}
-      {/*<News reference={newsRef} />*/}
-      {/*<OtherProject />*/}
       <ContactUs reference={contactUsRef} />
       <Footer />
       <BackToTopButton />

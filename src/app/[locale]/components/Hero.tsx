@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 import { JP } from "country-flag-icons/react/3x2";
-import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
 import { CldImage } from "next-cloudinary";
+import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import React from "react";
 import { FaCircleInfo } from "react-icons/fa6";
-import { useMediaQuery } from "@react-hook/media-query";
 
 interface HeroProps {
   reference: React.MutableRefObject<null>;
@@ -24,7 +24,7 @@ export const Hero = ({ reference }: HeroProps) => {
   const isJp = locale === "jp";
 
   const isMobile = useMediaQuery("only screen and (max-width: 500px)");
-
+  
   return (
     <AnimatePresence>
       <div
