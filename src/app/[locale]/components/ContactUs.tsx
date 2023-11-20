@@ -96,7 +96,11 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
   }, [errorMessages]);
 
   return (
-    <section className="text-gray-600 body-font relative" ref={reference} id="contact-us">
+    <section
+      className="text-gray-600 body-font relative"
+      ref={reference}
+      id="contact-us"
+    >
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -125,9 +129,7 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 Whatsapp
               </h2>
-              <span className="leading-relaxed">
-                0811 1993 3099
-              </span>
+              <span className="leading-relaxed">0811 1993 3099</span>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE
               </h2>
@@ -186,21 +188,6 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
                 className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div className="relative mb-4">
-              <label
-                htmlFor="domicile"
-                className="leading-7 text-sm text-gray-600"
-              >
-                {t("address")}
-              </label>
-              <input
-                type="text"
-                id="domicile"
-                name="domicile"
-                ref={inputDomiciliRef}
-                className="w-full bg-white rounded border border-gray-300 focus:border-[#75ACD8] focus:ring-2 focus:ring-[#75ACD8] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
             <div className="flex flex-col gap-3">
               <button
                 type="submit"
@@ -224,21 +211,21 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
                     </p>
                   ))}
                 </div>
-                ) : <div
+              ) : (
+                <div
                   className={`transition-opacity duration-300 ease-in-out ${
                     successMessage ? "opacity-100" : "opacity-0"
                   }`}
                 >
                   {successMessage}
                 </div>
-              }
+              )}
             </div>
-            
           </div>
         </form>
       </div>
       <div className="w-2/3 items-center text-center mx-auto mb-5 italic font-semibold text-danger underline text-sm">
-        <p>* {t('payment_information')}</p>
+        <p>* {t("payment_information")}</p>
       </div>
     </section>
   );

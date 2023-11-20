@@ -47,12 +47,11 @@
     "email": "Email",
     "phone": "Whatsapp No.",
     "address": "Domicile",
-    "submit": "Submit",
+    "submit": "Get Brochures",
     "loading": "Loading...",
     "success": "Thank you for your message. We will contact you soon.",
     "error": "Please fill all the fields.",
     "payment_information": "Payment can only be made through a transfer to the account of PT. Perumnas IIDA Group. We do not accept cash payments, and if the transfer is made from an account outside of PT. Perumnas IIDA Group, the company is not responsible."
-
   },
   "Units": {
     "title": "Our Units",

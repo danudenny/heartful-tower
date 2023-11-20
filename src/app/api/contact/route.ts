@@ -25,7 +25,6 @@ export async function POST(request: NextRequest) {
     email: email,
     whatsapp: whatsapp,
     name: name,
-    domicili: domicili,
   };
   const htmlToSend = template(replacements);
 

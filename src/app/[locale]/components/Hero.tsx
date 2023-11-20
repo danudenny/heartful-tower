@@ -15,7 +15,7 @@ interface HeroProps {
 export const Hero = ({ reference }: HeroProps) => {
   const t = useTranslations("Hero");
   const sendToWhatsapp = `https://wa.me/+6281119933099?text=${encodeURIComponent(
-    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
+    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda."
   )}`;
 
   // get parameters
@@ -24,7 +24,7 @@ export const Hero = ({ reference }: HeroProps) => {
   const isJp = locale === "jp";
 
   const isMobile = useMediaQuery("only screen and (max-width: 500px)");
-  
+
   return (
     <AnimatePresence>
       <div
@@ -62,41 +62,43 @@ export const Hero = ({ reference }: HeroProps) => {
             x: { duration: 1 },
           }}
         >
-          <div className="mb-16 lg:my-40 lg:max-w-full lg:pr-5">
-            <h2 className="mb-5 font-black text-4xl tracking-tight text-dark sm:text-8xl sm:leading-none shadow-white drop-shadow-xl">
-              The Desire
-              <br />
-              To<span className="text-danger-dark italic">Thrive</span>
-            </h2>
-            <p className="pr-5 text-dark md:text-lg lg:text-2xl drop-shadow-2xl shadow-gray-700">
-              {t("welcome")} <br />
-              {t("best_prices")}
-            </p>
-            <div className="flex mb-5 gap-2">
-              <p className="text-dark md:text-lg lg:text-2xl">
-                {t("japan_developer")}
+          <div className="flex">
+            <div className="mb-16 mt-20 lg:my-40 lg:max-w-full lg:pr-5">
+              <h2 className="mb-5 font-black text-4xl tracking-tight text-dark sm:text-8xl sm:leading-none shadow-white drop-shadow-xl">
+                The Desire
+                <br />
+                To<span className="text-danger-dark italic">Thrive</span>
+              </h2>
+              <p className="pr-5 text-dark md:text-lg lg:text-2xl drop-shadow-2xl shadow-gray-700">
+                {t("welcome")} <br />
+                {t("best_prices")}
               </p>
-              {!isJp && <JP width={30} height={30} />}
-            </div>
+              <div className="flex mb-5 gap-2">
+                <p className="text-dark md:text-lg lg:text-2xl">
+                  {t("japan_developer")}
+                </p>
+                {!isJp && <JP width={30} height={30} />}
+              </div>
 
-            {/*<div className="flex flex-col items-start mt-10 z-30 gap-3">*/}
-            {/*  <p className="italic font-medium text-dark">Developed By : </p>*/}
-            {/*  <img*/}
-            {/*    src="https://res.cloudinary.com/killtdj/image/upload/f_auto/q_auto/v1697167100/heartful/Japanese-No.1-Developer_fme4hi.png"*/}
-            {/*    alt="logo-japanese-developer"*/}
-            {/*    width="200"*/}
-            {/*    height="100"*/}
-            {/*  />*/}
-            {/*</div>*/}
-            <div className="flex items-center mt-10 lg:text-2xl">
-              <a
-                href={sendToWhatsapp}
-                target="_blank"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-success-alt focus:shadow-outline focus:outline-none"
-              >
-                {t("get_information")}{" "}
-                <FaCircleInfo className="ml-2" size={20} />
-              </a>
+              <div className="flex items-center mt-10 lg:text-2xl">
+                <a
+                  href={sendToWhatsapp}
+                  target="_blank"
+                  className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-dark hover:bg-success-alt focus:shadow-outline focus:outline-none"
+                >
+                  {t("get_information")}{" "}
+                  <FaCircleInfo className="ml-2" size={20} />
+                </a>
+              </div>
+            </div>
+            <div className="lg:ml-[1000px] lg:mt-[250px] absolute -mt-36">
+              <CldImage
+                alt="bg hero"
+                src="v1700465583/badge_hero_xu33tk.png"
+                width={200}
+                height={200}
+                priority={true}
+              />
             </div>
           </div>
         </motion.div>
