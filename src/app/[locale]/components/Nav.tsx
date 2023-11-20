@@ -45,7 +45,7 @@ export const Nav = ({
 
   const handleScrollToHero = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<string>,
+    section: string | React.SetStateAction<string>
   ) => {
     e.preventDefault();
     scrollToHero();
@@ -54,7 +54,7 @@ export const Nav = ({
 
   const handleScrollToAbout = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<string>,
+    section: string | React.SetStateAction<string>
   ) => {
     e.preventDefault();
     scrollToAbout();
@@ -63,7 +63,7 @@ export const Nav = ({
 
   const handleScrollToFacilities = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<string>,
+    section: string | React.SetStateAction<string>
   ) => {
     e.preventDefault();
     scrollToFacilities();
@@ -72,7 +72,7 @@ export const Nav = ({
 
   const handleScrollToContactUs = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<string>,
+    section: string | React.SetStateAction<string>
   ) => {
     e.preventDefault();
     scrollToContactUs();
@@ -90,7 +90,7 @@ export const Nav = ({
 
   const handleScrollToUnit = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    section: string | React.SetStateAction<string>,
+    section: string | React.SetStateAction<string>
   ) => {
     e.preventDefault();
     scrollToUnit();
@@ -98,7 +98,7 @@ export const Nav = ({
   };
 
   const sendToWhatsapp = `https://wa.me/+6281119933099?text=${encodeURIComponent(
-    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
+    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda."
   )}`;
 
   return (

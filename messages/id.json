@@ -1,6 +1,6 @@
 {
   "Nav": {
-    "get_promo": "Dapatkan Promo",
+    "get_promo": "Dapatkan Brosur",
     "home": "Home",
     "about": "About",
     "facilities": "Facilities",
@@ -47,7 +47,7 @@
     "email": "Email",
     "phone": "No. Whatsapp",
     "address": "Domisili",
-    "submit": "Dapatkan Brosur",
+    "submit": "Kirim",
     "loading": "Loading...",
     "success": "Terima kasih telah menghubungi kami. Kami akan segera menghubungi anda.",
     "error": "Mohon isi semua kolom.",

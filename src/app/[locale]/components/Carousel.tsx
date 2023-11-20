@@ -1,17 +1,21 @@
-import React, { useCallback } from "react";
+import {
+  imageAltByIndex,
+  imageByIndex,
+  imageTitleByIndex,
+} from "@/app/datas/facilities_image";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, {
   EmblaCarouselType,
   EmblaOptionsType,
 } from "embla-carousel-react";
-import { useDotButton } from "./CarouselDotButton";
+import { CldImage } from "next-cloudinary";
+import React, { useCallback } from "react";
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons,
 } from "./CarouselArrowButton";
-import Autoplay from "embla-carousel-autoplay";
-import imageByIndex from "@/app/datas/facilities_image";
-import { CldImage } from "next-cloudinary";
+import { useDotButton } from "./CarouselDotButton";
 
 type PropType = {
   slides: number[];
@@ -30,7 +34,7 @@ const Carousel: React.FC<PropType> = (props) => {
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
     emblaApi,
-    onButtonClick,
+    onButtonClick
   );
 
   const {
@@ -46,10 +50,14 @@ const Carousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
+              <div className="embla__slide__number">
+                <span>{imageTitleByIndex(index)}</span>
+              </div>
               <CldImage
                 className="embla__slide__img"
                 src={imageByIndex(index)}
-                alt="Your alt text"
+                alt={imageAltByIndex(index)}
+                title={imageTitleByIndex(index)}
                 width="600"
                 height="600"
               />
@@ -58,7 +66,7 @@ const Carousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="bottom-0 flex justify-between absolute bg-dark cursor-pointer">
+      <div className="bottom-0 flex justify-between cursor-pointer mb-[27px] bg-dark absolute">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>

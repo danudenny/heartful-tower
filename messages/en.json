@@ -1,6 +1,6 @@
 {
   "Nav": {
-    "get_promo": "Get Promotion",
+    "get_promo": "Get Brochures",
     "home": "Home",
     "about": "About",
     "facilities": "Facilities",
@@ -47,7 +47,7 @@
     "email": "Email",
     "phone": "Whatsapp No.",
     "address": "Domicile",
-    "submit": "Get Brochures",
+    "submit": "Submit",
     "loading": "Loading...",
     "success": "Thank you for your message. We will contact you soon.",
     "error": "Please fill all the fields.",

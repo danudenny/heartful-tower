@@ -94,7 +94,7 @@ export const Hero = ({ reference }: HeroProps) => {
             <div className="lg:ml-[1000px] lg:mt-[250px] absolute -mt-36">
               <CldImage
                 alt="bg hero"
-                src="v1700465583/badge_hero_xu33tk.png"
+                src="v1700476094/badge_hero-removebg-preview_rfxmui.png"
                 width={200}
                 height={200}
                 priority={true}
