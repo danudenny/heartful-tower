@@ -14,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
+import FacebookPixel from "./components/FacebookPixel";
 import Modal from "./components/Modal";
 
 export default function Home() {
@@ -38,10 +39,10 @@ export default function Home() {
       setScrolled(window.scrollY > 500);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -59,6 +60,7 @@ export default function Home() {
         `}
         </Script>
       </div>
+      <FacebookPixel />
       <Modal />
       <Nav
         scrollToHero={() => scrollToSection(heroRef)}
