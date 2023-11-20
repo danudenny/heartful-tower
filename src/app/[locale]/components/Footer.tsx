@@ -1,8 +1,8 @@
-import Image from "next/image";
-import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import { JP } from "country-flag-icons/react/3x2";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export const Footer = () => {
   const t = useTranslations("Hero");
@@ -140,10 +140,20 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+        <div className="flex sm:flex-row flex-col justify-between pt-5 pb-10 border-t lg:flex-row">
           <p className="text-sm text-gray-600">
             © Copyright {new Date().getFullYear()} Heartful Tower. All rights
             reserved.
+          </p>
+          <p className="text-xs text-gray-600 italic">
+            Web Design by{" "}
+            <Link
+              href="https://ruanglampustudio.com"
+              target="_blank"
+              className="bg-dark ml-1 py-1 px-2 text-white rounded-md"
+            >
+              Ruang Lampu
+            </Link>
           </p>
         </div>
       </div>
