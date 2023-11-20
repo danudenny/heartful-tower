@@ -1,12 +1,18 @@
 import { Statistic } from "@/app/[locale]/components/Statistic";
-import React, { useState } from "react";
-import { useTranslations } from "next-intl";
-import { CldImage } from "next-cloudinary";
 import { useMediaQuery } from "@react-hook/media-query";
+import { CldImage } from "next-cloudinary";
+import { useTranslations } from "next-intl";
+import { Space_Grotesk } from "next/font/google";
+import React, { useState } from "react";
 
 interface AboutProps {
   reference: React.MutableRefObject<null>;
 }
+
+const space_grotesk = Space_Grotesk({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const About = ({ reference }: AboutProps) => {
   const t = useTranslations("About");
@@ -29,7 +35,7 @@ export const About = ({ reference }: AboutProps) => {
                 {t("title1")}
               </h5>
               <p
-                className="mb-6 text-white text-lg"
+                className={`mb-6 text-white text-lg ${space_grotesk.className}`}
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="1000"
@@ -90,7 +96,7 @@ export const About = ({ reference }: AboutProps) => {
                 {t("title2")}
               </h5>
               <p
-                className="mb-6 text-white text-lg"
+                className={`mb-6 text-white text-lg ${space_grotesk.className}`}
                 data-aos="fade-up"
                 data-aos-delay="50"
                 data-aos-duration="1000"

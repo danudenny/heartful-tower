@@ -1,9 +1,15 @@
 import { useTranslations } from "next-intl";
+import { Space_Grotesk } from "next/font/google";
 import React, { useEffect, useRef, useState } from "react";
 
 interface ContactUsProps {
   reference: React.MutableRefObject<null>;
 }
+
+const space_grotesk = Space_Grotesk({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const ContactUs = ({ reference }: ContactUsProps) => {
   const t = useTranslations("Contact");
@@ -15,10 +21,6 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessages, setErrorMessages] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-
-  const downloadBrochure = async () => {
-    // create a download filepdf
-  };
 
   const subscribeUser = async (e: { preventDefault: () => void }) => {
     setIsLoading(true);
@@ -224,7 +226,9 @@ export const ContactUs = ({ reference }: ContactUsProps) => {
           </div>
         </form>
       </div>
-      <div className="w-2/3 items-center text-center mx-auto mb-5 italic font-semibold text-danger underline text-sm">
+      <div
+        className={`w-2/3 items-center text-center mx-auto mb-5 italic font-semibold text-danger underline text-md ${space_grotesk.className}`}
+      >
         <p>* {t("payment_information")}</p>
       </div>
     </section>

@@ -1,14 +1,20 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import FsLightbox from "fslightbox-react";
+import { useTranslations } from "next-intl";
+import { Space_Grotesk } from "next/font/google";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
 
 interface UnitsProps {
   reference: React.MutableRefObject<null>;
 }
+
+const space_grotesk = Space_Grotesk({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const Units = ({ reference }: UnitsProps) => {
   const t = useTranslations("Units");
@@ -57,7 +63,11 @@ export const Units = ({ reference }: UnitsProps) => {
         <h1 className="text-xl font-bold text-center text-dark uppercase sm:text-4xl">
           {t("title")}
         </h1>
-        <p className="text-sm text-center my-4 w-3/5">{t("p1")}</p>
+        <p
+          className={`text-md text-center my-4 w-3/5 ${space_grotesk.className}`}
+        >
+          {t("p1")}
+        </p>
       </div>
 
       {selectedImages && selectedTab === "Studio" && (

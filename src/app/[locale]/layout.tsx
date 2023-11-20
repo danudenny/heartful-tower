@@ -1,13 +1,18 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
-import React, { ReactNode } from "react";
-import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+import { Be_Vietnam_Pro, Space_Grotesk } from "next/font/google";
+import { notFound } from "next/navigation";
+import { ReactNode } from "react";
+import "./globals.css";
 
 // @ts-ignore
 const vietnamPro = Be_Vietnam_Pro({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+
+const space_grotesk = Space_Grotesk({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 

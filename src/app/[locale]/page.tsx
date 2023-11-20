@@ -14,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
+import CookieConsent from "./components/CookiesConsent";
 import FacebookPixel from "./components/FacebookPixel";
 import Modal from "./components/Modal";
 
@@ -61,6 +62,7 @@ export default function Home() {
         </Script>
       </div>
       <FacebookPixel />
+      <CookieConsent />
       <Modal />
       <Nav
         scrollToHero={() => scrollToSection(heroRef)}
