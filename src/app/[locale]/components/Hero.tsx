@@ -7,6 +7,8 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import React from "react";
 import { FaCircleInfo } from "react-icons/fa6";
+import HeroSlider, { Slide } from "hero-slider";
+import "hero-slider/dist/index.css";
 
 interface HeroProps {
   reference: React.MutableRefObject<null>;
@@ -15,7 +17,7 @@ interface HeroProps {
 export const Hero = ({ reference }: HeroProps) => {
   const t = useTranslations("Hero");
   const sendToWhatsapp = `https://wa.me/+6281119933099?text=${encodeURIComponent(
-    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda."
+    "Terimakasih Telah Menghubungi Heartful Tower Bekasi. Tim Marketing Kami Akan Segera Menghubungi Anda.",
   )}`;
 
   // get parameters
@@ -25,6 +27,7 @@ export const Hero = ({ reference }: HeroProps) => {
 
   const isMobile = useMediaQuery("only screen and (max-width: 500px)");
 
+  // @ts-ignore
   return (
     <AnimatePresence>
       <div
@@ -32,23 +35,67 @@ export const Hero = ({ reference }: HeroProps) => {
         ref={reference}
       >
         {isMobile ? (
-          <CldImage
-            alt="bg hero"
-            src="v1698671047/IMG_5955_iftlae.jpg"
-            width={1920}
-            height={1024}
-            priority={true}
-            className="absolute inset-0 object-cover w-full h-full opacity-70"
-          />
+          // <CldImage
+          //   alt="bg hero"
+          //   src="v1698671047/IMG_5955_iftlae.jpg"
+          //   width={1920}
+          //   height={1024}
+          //   priority={true}
+          //   className="absolute inset-0 object-cover w-full h-full opacity-70"
+          // />
+          <HeroSlider
+            className="h-full w-full absolute inset-0 object-cover opacity-70"
+            autoplay
+            controller={{
+              initialSlide: 1,
+              slidingDuration: 500,
+              slidingDelay: 100,
+            }}
+          >
+            <Slide
+              background={{
+                backgroundImageSrc:
+                  "https://res.cloudinary.com/killtdj/image/upload/v1703485212/v_be_landscape_up_dec23-min_itcfh4.jpg",
+              }}
+            />
+            <Slide
+              background={{
+                backgroundImageSrc:
+                  "https://res.cloudinary.com/killtdj/image/upload/v1698671047/IMG_5955_iftlae.jpg",
+              }}
+            />
+          </HeroSlider>
         ) : (
-          <CldImage
-            alt="bg hero"
-            src="v1697788758/bird_eye_stand_landscape_1_2_ybacti.jpg"
-            width={1920}
-            height={1024}
-            priority={true}
-            className="absolute inset-0 object-cover w-full h-full"
-          />
+          // <CldImage
+          //   alt="bg hero"
+          //   src="v1697788758/bird_eye_stand_landscape_1_2_ybacti.jpg"
+          //   width={1920}
+          //   height={1024}
+          //   priority={true}
+          //   className="absolute inset-0 object-cover w-full h-full"
+          // />
+          <HeroSlider
+            className="h-full w-full absolute inset-0 object-cover opacity-70"
+            autoplay
+            controller={{
+              initialSlide: 1,
+              slidingDuration: 500,
+              slidingDelay: 100,
+            }}
+          >
+            <Slide
+              background={{
+                backgroundImageSrc:
+                  "https://res.cloudinary.com/killtdj/image/upload/v1703483644/v_be_landscape_up_dec23-min_xbukxw.jpg",
+              }}
+            />
+            <Slide
+              background={{
+                backgroundImageSrc:
+                  "https://res.cloudinary.com/killtdj/image/upload/v1697788758/bird_eye_stand_landscape_1_2_ybacti.jpg",
+              }}
+            />
+          </HeroSlider>
         )}
 
         <motion.div
