@@ -48,15 +48,16 @@ export const About = ({ reference }: AboutProps) => {
             </div>
             <div>
               <CldImage
-                src="v1698670841/about-img_1_hc4ziv.png"
+                src="v1703483644/v_be_landscape_up_dec23-min_xbukxw.jpg"
                 alt="about image"
                 width={600}
                 height={600}
                 priority={false}
                 quality={80}
-                data-aos="fade-up"
+                data-aos="fade-in"
                 data-aos-delay="50"
                 data-aos-duration="1000"
+                className="rounded-xl"
               />
             </div>
           </div>
