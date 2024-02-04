@@ -12,6 +12,7 @@
     "@react-hook/media-query": "^1.1.1",
     "@types/nodemailer": "^6.4.13",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.6.7",
     "cookies-next": "^4.1.0",
     "country-flag-icons": "^1.5.7",
     "embla-carousel": "^8.0.0-rc14",
@@ -28,6 +29,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
+    "swr": "^2.2.4",
     "yet-another-react-lightbox": "^3.14.0"
   },
   "devDependencies": {
