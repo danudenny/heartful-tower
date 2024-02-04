@@ -18,27 +18,23 @@ interface HeroProps {
 export const Hero = ({ reference }: HeroProps) => {
     const [desktopImg, setDesktopImg] = useState('');
     const [mobileImg, setMobileImg] = useState('');
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const isMobile = useMediaQuery('only screen and (max-width: 500px)');
 
     useEffect(() => {
-        const getHero = async () => {
-            try {
-                const result = await axios.get(
-                    'https://admin.heartfultower.com/api/hero-sections?populate=*'
-                );
-                const dsktpImg = `https://admin.heartfultower.com${result?.data.data[0].attributes.dekstop_img.data.attributes.url}`;
-                const mbleImg = `https://admin.heartfultower.com${result?.data.data[0].attributes.mobile_img.data.attributes.url}`;
-
-                return isMobile
-                    ? setMobileImg(mbleImg)
-                    : setDesktopImg(dsktpImg);
-            } catch (error) {
-                console.error('Error fetching hero data:', error);
-            }
-        };
-
-        getHero();
+        axios
+            .get('https://admin.heartfultower.com/api/hero-sections?populate=*')
+            .then((response) => {
+                const dsktpImg = `https://admin.heartfultower.com${response?.data.data[0].attributes.dekstop_img.data.attributes.url}`;
+                const mbleImg = `https://admin.heartfultower.com${response?.data.data[0].attributes.mobile_img.data.attributes.url}`;
+                setDesktopImg(dsktpImg);
+                setMobileImg(mbleImg);
+                setIsLoaded(true);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }, []);
 
     const t = useTranslations('Hero');
@@ -57,28 +53,30 @@ export const Hero = ({ reference }: HeroProps) => {
                 className="relative flex flex-col pt-10 lg:pt-16 lg:flex-col lg:pb-0 h-screen"
                 ref={reference}
             >
-                {isMobile ? (
+                {/* Load Image for mobile and desktop and add blur when loading images from strapi */}
+                <div className="absolute inset-0 z-0">
                     <Image
-                        loader={() => mobileImg}
-                        src={mobileImg}
-                        alt="bg hero"
-                        fill
-                        className="absolute inset-0 object-cover"
-                        placeholder="blur"
+                        src={isMobile ? mobileImg : desktopImg}
+                        alt="Hero Image"
+                        width={isMobile ? 1000 : 2000}
+                        height={isMobile ? 1000 : 2000}
                         blurDataURL={base64Img}
-                    />
-                ) : (
-                    <Image
-                        loader={() => desktopImg}
-                        src={desktopImg}
-                        alt="bg hero"
-                        fill
-                        className="absolute inset-0 object-cover"
                         placeholder="blur"
-                        blurDataURL={base64Img}
+                        objectFit="cover"
+                        className="w-full h-full"
+                        onLoadingComplete={() => {
+                            setIsLoaded(true);
+                        }}
                     />
-                )}
-
+                    {isLoaded && (
+                        <motion.div
+                            className="absolute inset-0 bg-dark bg-opacity-70"
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 0 }}
+                            transition={{ duration: 1 }}
+                        />
+                    )}
+                </div>
                 <motion.div
                     className="relative flex flex-col w-full max-w-xl px-4 pt-64 sm:pt-0 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl text-white"
                     initial={{ x: 300, opacity: 0 }}

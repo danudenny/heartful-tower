@@ -44,9 +44,8 @@ export const Siteplan = () => {
                     data-aos-duration="1000"
                 >
                     <Image
-                        loader={() => siteplanImg}
-                        width="900"
-                        height="600"
+                        width={900}
+                        height={600}
                         src={siteplanImg}
                         alt="siteplan images"
                         onClick={() => setOpen(true)}

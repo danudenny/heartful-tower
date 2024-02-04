@@ -5,28 +5,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styles from '../styles/ImagePopup.module.css';
 
-const ImagePopup = ({ imageUrl, onClose }: any) => {
-    return (
-        <div className={styles.overlay} onClick={onClose}>
-            <div className={styles.popup}>
-                <div className={styles.img_container}>
-                    <Image
-                        loader={() => imageUrl}
-                        src={imageUrl}
-                        alt="bg hero"
-                        placeholder="blur"
-                        blurDataURL={base64Img}
-                        className={styles.img_popup}
-                        layout="fill"
-                        objectFit="contain"
-                    />
-                </div>
-            </div>
-        </div>
-    );
-};
 const Modal = () => {
     const [showPopup, setShowPopup] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const openPopup = () => {
         setShowPopup(true);
@@ -49,9 +30,35 @@ const Modal = () => {
 
     return (
         <>
+            {/* Set blurDataUrl when image is loading */}
             {showPopup && (
-                <ImagePopup imageUrl={modalImage} onClose={closePopup} />
+                <div className={styles.overlay} onClick={closePopup}>
+                    <div className={styles.popup}>
+                        <div className={styles.img_container}>
+                            <Image
+                                src={modalImage}
+                                alt="modal image"
+                                layout="fill"
+                                objectFit="contain"
+                                className={styles.img_popup}
+                                onLoad={() => setIsLoaded(true)}
+                                placeholder="blur"
+                                blurDataURL={base64Img}
+                            />
+                        </div>
+                    </div>
+                </div>
             )}
+            <Image
+                src={modalImage}
+                alt="modal image"
+                layout="fill"
+                objectFit="cover"
+                className={styles.modalImage}
+                onLoad={() => setIsLoaded(true)}
+                placeholder="blur"
+                blurDataURL={base64Img}
+            />
         </>
     );
 };

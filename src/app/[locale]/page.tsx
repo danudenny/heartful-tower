@@ -1,4 +1,5 @@
 'use client';
+
 import { About } from '@/app/[locale]/components/About';
 import { BackToTopButton } from '@/app/[locale]/components/BackToTopButton';
 import { ContactUs } from '@/app/[locale]/components/ContactUs';
@@ -73,10 +74,10 @@ export default function Home() {
             />
             <Hero reference={heroRef} />
             <Siteplan />
-            <About reference={aboutRef} />
-            <Facilities reference={faciltiesRef} />
+            {scrolled && <About reference={aboutRef} />}
+            {scrolled && <Facilities reference={faciltiesRef} />}
             {scrolled && <VideoPlayer />}
-            <Units reference={unitRef} />
+            {scrolled && <Units reference={unitRef} />}
             <ContactUs reference={contactUsRef} />
             <Footer />
             <BackToTopButton />
