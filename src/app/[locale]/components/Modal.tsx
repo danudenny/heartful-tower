@@ -1,59 +1,57 @@
 'use client';
 
-import React from 'react';
-import Lightbox from 'yet-another-react-lightbox';
-import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import { base64Img } from '@/app/dynamicBlurDataUrl';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import styles from '../styles/ImagePopup.module.css';
 
-interface Props {
-    isOpen: boolean;
-    onClose: () => void;
-}
-
-4;
+const ImagePopup = ({ imageUrl, onClose }: any) => {
+    return (
+        <div className={styles.overlay} onClick={onClose}>
+            <div className={styles.popup}>
+                <div className={styles.img_container}>
+                    <Image
+                        loader={() => imageUrl}
+                        src={imageUrl}
+                        alt="bg hero"
+                        placeholder="blur"
+                        blurDataURL={base64Img}
+                        className={styles.img_popup}
+                        layout="fill"
+                        objectFit="contain"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
 const Modal = () => {
-    const [isOpen, setIsOpen] = React.useState(true);
+    const [showPopup, setShowPopup] = useState(false);
 
-    const [maxZoomPixelRatio, setMaxZoomPixelRatio] = React.useState(1);
-    const [zoomInMultiplier, setZoomInMultiplier] = React.useState(2);
-    const [doubleTapDelay, setDoubleTapDelay] = React.useState(300);
-    const [doubleClickDelay, setDoubleClickDelay] = React.useState(300);
-    const [doubleClickMaxStops, setDoubleClickMaxStops] = React.useState(2);
-    const [keyboardMoveDistance, setKeyboardMoveDistance] = React.useState(50);
-    const [wheelZoomDistanceFactor, setWheelZoomDistanceFactor] =
-        React.useState(100);
-    const [pinchZoomDistanceFactor, setPinchZoomDistanceFactor] =
-        React.useState(100);
-    const [scrollToZoom, setScrollToZoom] = React.useState(false);
+    const openPopup = () => {
+        setShowPopup(true);
+    };
 
-    const modalImage = [
-        {
-            src: 'https://res.cloudinary.com/killtdj/image/upload/c_limit,w_600/f_auto/q_80/v1699364871/WhatsApp_Image_2023-11-07_at_1.15.21_PM_shjxzg.jpg',
-            alt: 'banner',
-        },
-    ];
+    const closePopup = () => {
+        setShowPopup(false);
+    };
+
+    useEffect(() => {
+        setTimeout(() => {
+            openPopup();
+        }, 2000);
+
+        return () => closePopup();
+    }, []);
+
+    const modalImage =
+        'https://res.cloudinary.com/killtdj/image/upload/c_limit,w_600/f_auto/q_80/v1699364871/WhatsApp_Image_2023-11-07_at_1.15.21_PM_shjxzg.jpg';
 
     return (
         <>
-            <Lightbox
-                className="hero__modal"
-                open={isOpen}
-                slides={modalImage}
-                close={() => setIsOpen(false)}
-                plugins={[Zoom]}
-                styles={{ container: { backgroundColor: 'rgba(0, 0, 0, .9)' } }}
-                zoom={{
-                    maxZoomPixelRatio,
-                    zoomInMultiplier,
-                    doubleTapDelay,
-                    doubleClickDelay,
-                    doubleClickMaxStops,
-                    keyboardMoveDistance,
-                    wheelZoomDistanceFactor,
-                    pinchZoomDistanceFactor,
-                    scrollToZoom,
-                }}
-                controller={{ closeOnBackdropClick: true }}
-            />
+            {showPopup && (
+                <ImagePopup imageUrl={modalImage} onClose={closePopup} />
+            )}
         </>
     );
 };
